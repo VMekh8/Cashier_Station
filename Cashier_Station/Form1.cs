@@ -12,6 +12,8 @@ namespace Cashier_Station
 {
     public partial class MainWindow : Form
     {
+        UIClass uI = new UIClass();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -54,7 +56,6 @@ namespace Cashier_Station
         private void label2_MouseLeave(object sender, EventArgs e)
         {
             label2.ForeColor = Color.White;
-
         }
     }
 }
