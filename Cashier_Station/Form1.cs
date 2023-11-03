@@ -61,7 +61,7 @@ namespace Cashier_Station
 
         private void label1_Click(object sender, EventArgs e)
         {
-            uI.OpenInWindow(new BuyTicketAuthorization(), PanelWindow);
+            uI.OpenInWindow(new MainWindowForm(), PanelWindow);
         }
     }
 }
