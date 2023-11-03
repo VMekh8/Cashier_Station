@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cashier_Station.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,6 +57,11 @@ namespace Cashier_Station
         private void label2_MouseLeave(object sender, EventArgs e)
         {
             label2.ForeColor = Color.White;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            uI.OpenInWindow(new BuyTicketAuthorization(), PanelWindow);
         }
     }
 }

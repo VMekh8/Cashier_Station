@@ -11,12 +11,11 @@ namespace Cashier_Station
     {
         public void OpenInWindow(Form fm, Panel p)
         {
-            Form frm = new Form();
-            frm.TopLevel = false;
-            frm.FormBorderStyle = FormBorderStyle.None;
+            fm.TopLevel = false;
+            fm.FormBorderStyle = FormBorderStyle.None;
             p.Controls.Clear();
-            p.Controls.Add(frm);
-            frm.Visible = true;
+            p.Controls.Add(fm);
+            fm.Visible = true;
         }
     }
 }
