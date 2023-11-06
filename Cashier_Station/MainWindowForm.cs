@@ -24,5 +24,11 @@ namespace Cashier_Station
             var route = new RouteWindow();
             mainWindow.OpenInwindow(route);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var ticket = new TicketWindowForm();
+            mainWindow.OpenInwindow(ticket);
+        }
     }
 }

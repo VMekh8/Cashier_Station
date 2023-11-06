@@ -108,6 +108,12 @@
     <Compile Include="RouteWindow.Designer.cs">
       <DependentUpon>RouteWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="TicketWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketWindowForm.Designer.cs">
+      <DependentUpon>TicketWindowForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIClass.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -130,6 +136,9 @@
     </Compile>
     <EmbeddedResource Include="RouteWindow.resx">
       <DependentUpon>RouteWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketWindowForm.resx">
+      <DependentUpon>TicketWindowForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
