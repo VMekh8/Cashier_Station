@@ -12,6 +12,7 @@ namespace Cashier_Station
         public void OpenInWindow(Form fm, Panel p)
         {
             fm.TopLevel = false;
+            fm.TopMost = true;
             fm.FormBorderStyle = FormBorderStyle.None;
             p.Controls.Clear();
             p.Controls.Add(fm);
