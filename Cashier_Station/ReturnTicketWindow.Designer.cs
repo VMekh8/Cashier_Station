@@ -41,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(334, 9);
+            this.label1.Location = new System.Drawing.Point(349, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(318, 39);
             this.label1.TabIndex = 1;
@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.bunifuMetroTextbox1);
             this.panel1.Controls.Add(this.SubmitButton);
-            this.panel1.Location = new System.Drawing.Point(198, 61);
+            this.panel1.Location = new System.Drawing.Point(224, 70);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(570, 380);
             this.panel1.TabIndex = 2;
@@ -93,7 +93,7 @@
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SubmitButton.ForeColor = System.Drawing.Color.White;
-            this.SubmitButton.Location = new System.Drawing.Point(173, 210);
+            this.SubmitButton.Location = new System.Drawing.Point(164, 217);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(239, 74);
             this.SubmitButton.TabIndex = 3;
@@ -105,7 +105,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(956, 470);
+            this.ClientSize = new System.Drawing.Size(1000, 500);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

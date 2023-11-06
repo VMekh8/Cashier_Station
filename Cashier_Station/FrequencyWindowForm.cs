@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Cashier_Station
 {
-    public partial class RouteWindow : Form
+    public partial class FrequencyWindowForm : Form
     {
-        public RouteWindow()
+        public FrequencyWindowForm()
         {
             InitializeComponent();
-        }
-
-        private void SubmitButton_Click(object sender, EventArgs e)
-        {
-            var frequency = new FrequencyWindowForm();
-            frequency.Show();
         }
     }
 }

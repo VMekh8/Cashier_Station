@@ -16,5 +16,7 @@ namespace Cashier_Station
         {
             InitializeComponent();
         }
+
+   
     }
 }

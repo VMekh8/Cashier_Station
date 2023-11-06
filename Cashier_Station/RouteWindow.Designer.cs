@@ -108,12 +108,13 @@
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SubmitButton.ForeColor = System.Drawing.Color.White;
-            this.SubmitButton.Location = new System.Drawing.Point(630, 128);
+            this.SubmitButton.Location = new System.Drawing.Point(636, 128);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(322, 54);
+            this.SubmitButton.Size = new System.Drawing.Size(316, 54);
             this.SubmitButton.TabIndex = 4;
             this.SubmitButton.Text = "Аналіз частоти відправлень";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // RouteWindow
             // 
