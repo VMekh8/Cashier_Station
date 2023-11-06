@@ -132,7 +132,6 @@
     <Compile Include="TicketWindowForm.Designer.cs">
       <DependentUpon>TicketWindowForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIClass.cs" />
     <EmbeddedResource Include="ClientWindowForm.resx">
       <DependentUpon>ClientWindowForm.cs</DependentUpon>
     </EmbeddedResource>

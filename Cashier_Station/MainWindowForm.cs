@@ -22,19 +22,19 @@ namespace Cashier_Station
         private void GotoRouteButton_Click(object sender, EventArgs e)
         {
             var route = new RouteWindow();
-            mainWindow.OpenInwindow(route);
+            mainWindow.OpenInWindow(route);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             var ticket = new TicketWindowForm();
-            mainWindow.OpenInwindow(ticket);
+            mainWindow.OpenInWindow(ticket);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             var client = new ClientWindowForm();
-            mainWindow.OpenInwindow(client);
+            mainWindow.OpenInWindow(client);
         }
     }
 }

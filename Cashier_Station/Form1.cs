@@ -13,18 +13,23 @@ namespace Cashier_Station
 {
     public partial class MainWindow : Form
     {
-        UIClass uI = new UIClass();
         
         public MainWindow()
         {
             InitializeComponent();
-            uI.OpenInWindow(new MainWindowForm(this), GetMainPanel());
+            OpenInWindow(new MainWindowForm(this));
         }
 
 
-        public void OpenInwindow(Form fm)
+        public void OpenInWindow(Form fm)
         {
-            uI.OpenInWindow(fm, GetMainPanel());
+            var p = GetMainPanel();
+            fm.TopLevel = false;
+            fm.TopMost = true;
+            fm.FormBorderStyle = FormBorderStyle.None;
+            p.Controls.Clear();
+            p.Controls.Add(fm);
+            fm.Visible = true;
         }
 
         public Panel GetMainPanel() => this.PanelWindow;
@@ -70,7 +75,7 @@ namespace Cashier_Station
 
         private void label1_Click(object sender, EventArgs e)
         {
-            uI.OpenInWindow(new MainWindowForm(this), GetMainPanel());
+            OpenInWindow(new MainWindowForm(this));
         }
     }
 }
