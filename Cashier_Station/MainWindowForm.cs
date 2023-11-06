@@ -12,11 +12,17 @@ namespace Cashier_Station
 {
     public partial class MainWindowForm : Form
     {
+        UIClass uI = new UIClass();
+        MainWindow MainWindow;
         public MainWindowForm()
         {
             InitializeComponent();
+            
         }
 
-       
+        private void GoToTicketButton_Click(object sender, EventArgs e)
+        {
+            uI.OpenInWindow(new RouteWindow(), MainWindow.GetMainPanel());
+        }
     }
 }

@@ -14,11 +14,14 @@ namespace Cashier_Station
     public partial class MainWindow : Form
     {
         UIClass uI = new UIClass();
-
         public MainWindow()
         {
             InitializeComponent();
+            uI.OpenInWindow(new MainWindowForm(), GetMainPanel());
         }
+
+
+        public Panel GetMainPanel() => PanelWindow;
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
@@ -61,7 +64,7 @@ namespace Cashier_Station
 
         private void label1_Click(object sender, EventArgs e)
         {
-            uI.OpenInWindow(new MainWindowForm(), PanelWindow);
+            uI.OpenInWindow(new MainWindowForm(), GetMainPanel());
         }
     }
 }

@@ -10,11 +10,8 @@ namespace Cashier_Station.Models
     {
         public int IDRoute { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-
         public string StartPoint { get; set; }
         public string EndPoint { get; set; }
-
         public DateTime DateofStart { get; set; }
         public DateTime DateofEnd { get; set;}
         public int SeatsNumber { get; set; }
