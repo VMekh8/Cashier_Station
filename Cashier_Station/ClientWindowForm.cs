@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Cashier_Station
 {
-    public partial class FrequencyWindowForm : Form
+    public partial class ClientWindowForm : Form
     {
-        public FrequencyWindowForm()
+        public ClientWindowForm()
         {
             InitializeComponent();
         }
-
-       
     }
 }

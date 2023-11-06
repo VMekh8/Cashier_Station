@@ -30,5 +30,11 @@ namespace Cashier_Station
             var ticket = new TicketWindowForm();
             mainWindow.OpenInwindow(ticket);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var client = new ClientWindowForm();
+            mainWindow.OpenInwindow(client);
+        }
     }
 }

@@ -11,6 +11,6 @@ namespace Cashier_Station.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public Ticket idTicketForBuy { get; set; }
+        public List<Ticket> idTicketForBuy { get; set; }
     }
 }

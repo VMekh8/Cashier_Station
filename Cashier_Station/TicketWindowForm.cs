@@ -22,13 +22,13 @@ namespace Cashier_Station
         private void button2_Click(object sender, EventArgs e)
         {
             var ticketbuy = new BuyTicketAuthorization();
-            ticketbuy.Show();
+            ticketbuy.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             var ticketreturn = new ReturnTicketWindow();
-            ticketreturn.Show();
+            ticketreturn.ShowDialog();
         }
     }
 }

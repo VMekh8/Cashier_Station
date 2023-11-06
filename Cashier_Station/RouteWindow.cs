@@ -20,7 +20,7 @@ namespace Cashier_Station
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             var frequency = new FrequencyWindowForm();
-            frequency.Show();
+            frequency.ShowDialog();
         }
     }
 }

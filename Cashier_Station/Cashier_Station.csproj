@@ -76,6 +76,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientWindowForm.Designer.cs">
+      <DependentUpon>ClientWindowForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
       <DependentUpon>TicketWindowForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UIClass.cs" />
+    <EmbeddedResource Include="ClientWindowForm.resx">
+      <DependentUpon>ClientWindowForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
