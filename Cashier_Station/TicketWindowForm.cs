@@ -24,5 +24,11 @@ namespace Cashier_Station
             var ticketbuy = new BuyTicketAuthorization();
             ticketbuy.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var ticketreturn = new ReturnTicketWindow();
+            ticketreturn.Show();
+        }
     }
 }

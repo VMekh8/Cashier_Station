@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cashier_Station.Models
 {
-    public class Client : Ticket
+    public class Client
     {
         public int Id { get; set; }
         public string Name { get; set; }
