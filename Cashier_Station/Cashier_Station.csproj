@@ -76,6 +76,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CashierMainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierMainWindow.Designer.cs">
+      <DependentUpon>CashierMainWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientWindowForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     <Compile Include="TicketWindowForm.Designer.cs">
       <DependentUpon>TicketWindowForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CashierMainWindow.resx">
+      <DependentUpon>CashierMainWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientWindowForm.resx">
       <DependentUpon>ClientWindowForm.cs</DependentUpon>
     </EmbeddedResource>

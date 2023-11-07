@@ -295,7 +295,8 @@
             this.pictureBox3.Image = global::Cashier_Station.Properties.Resources.user_interface;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(302, 205);
+            this.pictureBox3.Padding = new System.Windows.Forms.Padding(8);
+            this.pictureBox3.Size = new System.Drawing.Size(302, 196);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;

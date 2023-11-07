@@ -77,5 +77,10 @@ namespace Cashier_Station
         {
             OpenInWindow(new MainWindowForm(this));
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            OpenInWindow(new CashierMainWindow());
+        }
     }
 }
