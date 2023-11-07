@@ -10,7 +10,7 @@ namespace Cashier_Station.Models
     {
         public int Id { get; set; }
         
-        public Route routeId { get; set; }
+        public int RouteId { get; set; }
 
         public int Price { get; set; }
 

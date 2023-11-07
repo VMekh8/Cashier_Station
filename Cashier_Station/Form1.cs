@@ -82,5 +82,10 @@ namespace Cashier_Station
         {
             OpenInWindow(new CashierMainWindow());
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            OpenInWindow(new AdminPanelWindowForm());
+        }
     }
 }

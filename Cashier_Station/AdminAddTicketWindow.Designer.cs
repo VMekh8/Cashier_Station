@@ -1,6 +1,6 @@
-﻿namespace Cashier_Station.Models
+﻿namespace Cashier_Station
 {
-    partial class BuyTicketAuthorization
+    partial class AdminAddTicketWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SurnameTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.UsrnameTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,10 +49,10 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.SurnameTextBox);
             this.panel1.Controls.Add(this.UsrnameTextBox);
-            this.panel1.Location = new System.Drawing.Point(226, 86);
+            this.panel1.Location = new System.Drawing.Point(207, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(570, 380);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // label4
             // 
@@ -62,9 +61,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(29, 210);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(332, 31);
+            this.label4.Size = new System.Drawing.Size(235, 31);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Введіть номер маршруту";
+            this.label4.Text = "Номер маршруту";
             // 
             // bunifuMetroTextbox1
             // 
@@ -104,9 +103,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(29, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(234, 31);
+            this.label3.Size = new System.Drawing.Size(164, 31);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Введіть прізвище";
+            this.label3.Text = "Ціна квитка";
             // 
             // label2
             // 
@@ -115,9 +114,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(29, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 31);
+            this.label2.Size = new System.Drawing.Size(192, 31);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Введіть ім\'я";
+            this.label2.Text = "Номер квитка";
             // 
             // SurnameTextBox
             // 
@@ -155,45 +154,31 @@
             this.UsrnameTextBox.TabIndex = 0;
             this.UsrnameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(179, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(691, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Заповнення інформації для покупки квитка";
-            // 
-            // BuyTicketAuthorization
+            // AdminAddTicketWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1000, 519);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(984, 480);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "BuyTicketAuthorization";
-            this.Text = "BuyTicketAuthorization";
+            this.Name = "AdminAddTicketWindow";
+            this.Text = "AdminAddTicketWindow";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox UsrnameTextBox;
-        private Bunifu.Framework.UI.BunifuMetroTextbox SurnameTextBox;
+        private System.Windows.Forms.Label label4;
+        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox SurnameTextBox;
+        private Bunifu.Framework.UI.BunifuMetroTextbox UsrnameTextBox;
     }
 }

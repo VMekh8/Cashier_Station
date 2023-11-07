@@ -76,6 +76,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminAddRouteWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAddRouteWindow.Designer.cs">
+      <DependentUpon>AdminAddRouteWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddTicketWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAddTicketWindow.Designer.cs">
+      <DependentUpon>AdminAddTicketWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDeleteRouteWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDeleteRouteWindow.Designer.cs">
+      <DependentUpon>AdminDeleteRouteWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDeleteTicketWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDeleteTicketWindow.Designer.cs">
+      <DependentUpon>AdminDeleteTicketWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanelWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanelWindowForm.Designer.cs">
+      <DependentUpon>AdminPanelWindowForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CashierMainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +168,21 @@
     <Compile Include="TicketWindowForm.Designer.cs">
       <DependentUpon>TicketWindowForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminAddRouteWindow.resx">
+      <DependentUpon>AdminAddRouteWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAddTicketWindow.resx">
+      <DependentUpon>AdminAddTicketWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDeleteRouteWindow.resx">
+      <DependentUpon>AdminDeleteRouteWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDeleteTicketWindow.resx">
+      <DependentUpon>AdminDeleteTicketWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanelWindowForm.resx">
+      <DependentUpon>AdminPanelWindowForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CashierMainWindow.resx">
       <DependentUpon>CashierMainWindow.cs</DependentUpon>
     </EmbeddedResource>
