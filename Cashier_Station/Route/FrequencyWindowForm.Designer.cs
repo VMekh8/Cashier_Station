@@ -63,7 +63,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(36, 359);
+            this.label4.Location = new System.Drawing.Point(328, 361);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(306, 27);
             this.label4.TabIndex = 7;
@@ -80,7 +80,7 @@
             this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.White;
             this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(42, 391);
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(334, 393);
             this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
             this.bunifuMetroTextbox1.Size = new System.Drawing.Size(321, 35);
@@ -92,7 +92,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(35, 438);
+            this.label2.Location = new System.Drawing.Point(327, 440);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(257, 27);
             this.label2.TabIndex = 9;
@@ -109,7 +109,7 @@
             this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.White;
             this.bunifuMetroTextbox2.isPassword = false;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(41, 470);
+            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(333, 472);
             this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
             this.bunifuMetroTextbox2.Size = new System.Drawing.Size(321, 35);
@@ -122,9 +122,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(384, 391);
+            this.button1.Location = new System.Drawing.Point(719, 440);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(229, 114);
+            this.button1.Size = new System.Drawing.Size(231, 67);
             this.button1.TabIndex = 10;
             this.button1.Text = "Аналіз";
             this.button1.UseVisualStyleBackColor = true;

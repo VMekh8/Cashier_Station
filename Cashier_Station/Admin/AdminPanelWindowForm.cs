@@ -40,5 +40,17 @@ namespace Cashier_Station
             var deleteRoute = new AdminDeleteRouteWindow();
             deleteRoute.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var editroute = new AdminEditRouteWindow();
+            editroute.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var editticket = new AdminTicketEditWindow();
+            editticket.ShowDialog();
+        }
     }
 }

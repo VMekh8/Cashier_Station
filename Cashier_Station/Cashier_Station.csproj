@@ -76,46 +76,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminAddRouteWindow.cs">
+    <Compile Include="Admin\AdminAddRouteWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminAddRouteWindow.Designer.cs">
+    <Compile Include="Admin\AdminAddRouteWindow.Designer.cs">
       <DependentUpon>AdminAddRouteWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminAddTicketWindow.cs">
+    <Compile Include="Admin\AdminAddTicketWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminAddTicketWindow.Designer.cs">
+    <Compile Include="Admin\AdminAddTicketWindow.Designer.cs">
       <DependentUpon>AdminAddTicketWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminDeleteRouteWindow.cs">
+    <Compile Include="Admin\AdminDeleteRouteWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminDeleteRouteWindow.Designer.cs">
+    <Compile Include="Admin\AdminDeleteRouteWindow.Designer.cs">
       <DependentUpon>AdminDeleteRouteWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminDeleteTicketWindow.cs">
+    <Compile Include="Admin\AdminDeleteTicketWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminDeleteTicketWindow.Designer.cs">
+    <Compile Include="Admin\AdminDeleteTicketWindow.Designer.cs">
       <DependentUpon>AdminDeleteTicketWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminPanelWindowForm.cs">
+    <Compile Include="Admin\AdminEditRouteWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminPanelWindowForm.Designer.cs">
+    <Compile Include="Admin\AdminEditRouteWindow.Designer.cs">
+      <DependentUpon>AdminEditRouteWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPanelWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPanelWindowForm.Designer.cs">
       <DependentUpon>AdminPanelWindowForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CashierMainWindow.cs">
+    <Compile Include="Admin\AdminTicketEditWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CashierMainWindow.Designer.cs">
+    <Compile Include="Admin\AdminTicketEditWindow.Designer.cs">
+      <DependentUpon>AdminTicketEditWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\CashierMainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\CashierMainWindow.Designer.cs">
       <DependentUpon>CashierMainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientWindowForm.cs">
+    <Compile Include="Client\ClientWindowForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientWindowForm.Designer.cs">
+    <Compile Include="Client\ClientWindowForm.Designer.cs">
       <DependentUpon>ClientWindowForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -124,16 +136,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuyTicketAuthorization.cs">
+    <Compile Include="Ticket\BuyTicketAuthorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuyTicketAuthorization.Designer.cs">
+    <Compile Include="Ticket\BuyTicketAuthorization.Designer.cs">
       <DependentUpon>BuyTicketAuthorization.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrequencyWindowForm.cs">
+    <Compile Include="Route\FrequencyWindowForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrequencyWindowForm.Designer.cs">
+    <Compile Include="Route\FrequencyWindowForm.Designer.cs">
       <DependentUpon>FrequencyWindowForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainWindowForm.cs">
@@ -150,52 +162,58 @@
     <Compile Include="Models\Transport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReturnTicketWindow.cs">
+    <Compile Include="Ticket\ReturnTicketWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReturnTicketWindow.Designer.cs">
+    <Compile Include="Ticket\ReturnTicketWindow.Designer.cs">
       <DependentUpon>ReturnTicketWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="RouteWindow.cs">
+    <Compile Include="Route\RouteWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RouteWindow.Designer.cs">
+    <Compile Include="Route\RouteWindow.Designer.cs">
       <DependentUpon>RouteWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="TicketWindowForm.cs">
+    <Compile Include="Ticket\TicketWindowForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TicketWindowForm.Designer.cs">
+    <Compile Include="Ticket\TicketWindowForm.Designer.cs">
       <DependentUpon>TicketWindowForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminAddRouteWindow.resx">
+    <EmbeddedResource Include="Admin\AdminAddRouteWindow.resx">
       <DependentUpon>AdminAddRouteWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminAddTicketWindow.resx">
+    <EmbeddedResource Include="Admin\AdminAddTicketWindow.resx">
       <DependentUpon>AdminAddTicketWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminDeleteRouteWindow.resx">
+    <EmbeddedResource Include="Admin\AdminDeleteRouteWindow.resx">
       <DependentUpon>AdminDeleteRouteWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminDeleteTicketWindow.resx">
+    <EmbeddedResource Include="Admin\AdminDeleteTicketWindow.resx">
       <DependentUpon>AdminDeleteTicketWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminPanelWindowForm.resx">
+    <EmbeddedResource Include="Admin\AdminEditRouteWindow.resx">
+      <DependentUpon>AdminEditRouteWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminPanelWindowForm.resx">
       <DependentUpon>AdminPanelWindowForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashierMainWindow.resx">
+    <EmbeddedResource Include="Admin\AdminTicketEditWindow.resx">
+      <DependentUpon>AdminTicketEditWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\CashierMainWindow.resx">
       <DependentUpon>CashierMainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientWindowForm.resx">
+    <EmbeddedResource Include="Client\ClientWindowForm.resx">
       <DependentUpon>ClientWindowForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuyTicketAuthorization.resx">
+    <EmbeddedResource Include="Ticket\BuyTicketAuthorization.resx">
       <DependentUpon>BuyTicketAuthorization.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrequencyWindowForm.resx">
+    <EmbeddedResource Include="Route\FrequencyWindowForm.resx">
       <DependentUpon>FrequencyWindowForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindowForm.resx">
@@ -211,13 +229,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ReturnTicketWindow.resx">
+    <EmbeddedResource Include="Ticket\ReturnTicketWindow.resx">
       <DependentUpon>ReturnTicketWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RouteWindow.resx">
+    <EmbeddedResource Include="Route\RouteWindow.resx">
       <DependentUpon>RouteWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TicketWindowForm.resx">
+    <EmbeddedResource Include="Ticket\TicketWindowForm.resx">
       <DependentUpon>TicketWindowForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
