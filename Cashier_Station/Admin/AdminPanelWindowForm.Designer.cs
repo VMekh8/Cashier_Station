@@ -41,6 +41,7 @@
             this.EditTransportButton = new System.Windows.Forms.Button();
             this.AddtransportButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -172,6 +173,7 @@
             this.DeleteTransportButton.TabIndex = 14;
             this.DeleteTransportButton.Text = "Видалити";
             this.DeleteTransportButton.UseVisualStyleBackColor = true;
+            this.DeleteTransportButton.Click += new System.EventHandler(this.DeleteTransportButton_Click);
             // 
             // EditTransportButton
             // 
@@ -185,6 +187,7 @@
             this.EditTransportButton.TabIndex = 13;
             this.EditTransportButton.Text = "Редагувати";
             this.EditTransportButton.UseVisualStyleBackColor = true;
+            this.EditTransportButton.Click += new System.EventHandler(this.EditTransportButton_Click);
             // 
             // AddtransportButton
             // 
@@ -198,6 +201,7 @@
             this.AddtransportButton.TabIndex = 12;
             this.AddtransportButton.Text = "Додати";
             this.AddtransportButton.UseVisualStyleBackColor = true;
+            this.AddtransportButton.Click += new System.EventHandler(this.AddtransportButton_Click);
             // 
             // label4
             // 
@@ -210,12 +214,26 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Транспорт";
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(388, 449);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(228, 58);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Проміжні станції";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // AdminPanelWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1000, 519);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.DeleteTransportButton);
             this.Controls.Add(this.EditTransportButton);
             this.Controls.Add(this.AddtransportButton);
@@ -252,5 +270,6 @@
         private System.Windows.Forms.Button EditTransportButton;
         private System.Windows.Forms.Button AddtransportButton;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }

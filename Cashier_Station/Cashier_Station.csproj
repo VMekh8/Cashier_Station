@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AddTransportWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AddTransportWindow.Designer.cs">
+      <DependentUpon>AddTransportWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminAddRouteWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,18 @@
     </Compile>
     <Compile Include="Admin\AdminTicketEditWindow.Designer.cs">
       <DependentUpon>AdminTicketEditWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DeleteTransportWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\DeleteTransportWindow.Designer.cs">
+      <DependentUpon>DeleteTransportWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditTransportWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\EditTransportWindow.Designer.cs">
+      <DependentUpon>EditTransportWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Cashier\CashierMainWindow.cs">
       <SubType>Form</SubType>
@@ -173,6 +191,9 @@
     <Compile Include="Ticket\TicketWindowForm.Designer.cs">
       <DependentUpon>TicketWindowForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin\AddTransportWindow.resx">
+      <DependentUpon>AddTransportWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminAddRouteWindow.resx">
       <DependentUpon>AdminAddRouteWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +214,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminTicketEditWindow.resx">
       <DependentUpon>AdminTicketEditWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\DeleteTransportWindow.resx">
+      <DependentUpon>DeleteTransportWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\EditTransportWindow.resx">
+      <DependentUpon>EditTransportWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashier\CashierMainWindow.resx">
       <DependentUpon>CashierMainWindow.cs</DependentUpon>

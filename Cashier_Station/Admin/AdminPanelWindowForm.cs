@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cashier_Station.Admin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +52,24 @@ namespace Cashier_Station
         {
             var editticket = new AdminTicketEditWindow();
             editticket.ShowDialog();
+        }
+
+        private void AddtransportButton_Click(object sender, EventArgs e)
+        {
+            var addTransp = new AddTransportWindow();
+            addTransp.ShowDialog();
+        }
+
+        private void EditTransportButton_Click(object sender, EventArgs e)
+        {
+            var edittransp = new EditTransportWindow();
+            edittransp.ShowDialog();
+        }
+
+        private void DeleteTransportButton_Click(object sender, EventArgs e)
+        {
+            var deletetransp = new DeleteTransportWindow();
+            deletetransp.ShowDialog();
         }
     }
 }

@@ -43,12 +43,16 @@
             this.SurnameTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.UsrnameTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.bunifuMetroTextbox3);
             this.panel1.Controls.Add(this.bunifuDatepicker2);
             this.panel1.Controls.Add(this.bunifuDatepicker1);
             this.panel1.Controls.Add(this.label1);
@@ -179,7 +183,7 @@
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SubmitButton.ForeColor = System.Drawing.Color.White;
-            this.SubmitButton.Location = new System.Drawing.Point(297, 335);
+            this.SubmitButton.Location = new System.Drawing.Point(451, 338);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(256, 81);
             this.SubmitButton.TabIndex = 3;
@@ -258,6 +262,35 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(29, 307);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(251, 31);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Номер транспорту";
+            // 
+            // bunifuMetroTextbox3
+            // 
+            this.bunifuMetroTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.Gray;
+            this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.Gray;
+            this.bunifuMetroTextbox3.BorderThickness = 3;
+            this.bunifuMetroTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.White;
+            this.bunifuMetroTextbox3.isPassword = false;
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(35, 338);
+            this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
+            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(326, 46);
+            this.bunifuMetroTextbox3.TabIndex = 14;
+            this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // AdminAddRouteWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,5 +325,7 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox SurnameTextBox;
         private Bunifu.Framework.UI.BunifuMetroTextbox UsrnameTextBox;
         private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Label label7;
+        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
     }
 }
