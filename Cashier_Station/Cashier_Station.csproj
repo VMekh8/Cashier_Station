@@ -69,40 +69,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\AddTransportWindow.cs">
+    <Compile Include="Admin\InterMediateRoute.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AddTransportWindow.Designer.cs">
+    <Compile Include="Admin\InterMediateRoute.Designer.cs">
+      <DependentUpon>InterMediateRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Transport\AddTransportWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Transport\AddTransportWindow.Designer.cs">
       <DependentUpon>AddTransportWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminAddRouteWindow.cs">
+    <Compile Include="Admin\Route\AdminAddRouteWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminAddRouteWindow.Designer.cs">
+    <Compile Include="Admin\Route\AdminAddRouteWindow.Designer.cs">
       <DependentUpon>AdminAddRouteWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminAddTicketWindow.cs">
+    <Compile Include="Admin\Ticket\AdminAddTicketWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminAddTicketWindow.Designer.cs">
+    <Compile Include="Admin\Ticket\AdminAddTicketWindow.Designer.cs">
       <DependentUpon>AdminAddTicketWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminDeleteRouteWindow.cs">
+    <Compile Include="Admin\Route\AdminDeleteRouteWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminDeleteRouteWindow.Designer.cs">
+    <Compile Include="Admin\Route\AdminDeleteRouteWindow.Designer.cs">
       <DependentUpon>AdminDeleteRouteWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminDeleteTicketWindow.cs">
+    <Compile Include="Admin\Ticket\AdminDeleteTicketWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminDeleteTicketWindow.Designer.cs">
+    <Compile Include="Admin\Ticket\AdminDeleteTicketWindow.Designer.cs">
       <DependentUpon>AdminDeleteTicketWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminEditRouteWindow.cs">
+    <Compile Include="Admin\Route\AdminEditRouteWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminEditRouteWindow.Designer.cs">
+    <Compile Include="Admin\Route\AdminEditRouteWindow.Designer.cs">
       <DependentUpon>AdminEditRouteWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminPanelWindowForm.cs">
@@ -111,22 +117,22 @@
     <Compile Include="Admin\AdminPanelWindowForm.Designer.cs">
       <DependentUpon>AdminPanelWindowForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminTicketEditWindow.cs">
+    <Compile Include="Admin\Ticket\AdminTicketEditWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminTicketEditWindow.Designer.cs">
+    <Compile Include="Admin\Ticket\AdminTicketEditWindow.Designer.cs">
       <DependentUpon>AdminTicketEditWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\DeleteTransportWindow.cs">
+    <Compile Include="Admin\Transport\DeleteTransportWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\DeleteTransportWindow.Designer.cs">
+    <Compile Include="Admin\Transport\DeleteTransportWindow.Designer.cs">
       <DependentUpon>DeleteTransportWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\EditTransportWindow.cs">
+    <Compile Include="Admin\Transport\EditTransportWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\EditTransportWindow.Designer.cs">
+    <Compile Include="Admin\Transport\EditTransportWindow.Designer.cs">
       <DependentUpon>EditTransportWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Cashier\CashierMainWindow.cs">
@@ -191,34 +197,37 @@
     <Compile Include="Ticket\TicketWindowForm.Designer.cs">
       <DependentUpon>TicketWindowForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin\AddTransportWindow.resx">
+    <EmbeddedResource Include="Admin\InterMediateRoute.resx">
+      <DependentUpon>InterMediateRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Transport\AddTransportWindow.resx">
       <DependentUpon>AddTransportWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminAddRouteWindow.resx">
+    <EmbeddedResource Include="Admin\Route\AdminAddRouteWindow.resx">
       <DependentUpon>AdminAddRouteWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminAddTicketWindow.resx">
+    <EmbeddedResource Include="Admin\Ticket\AdminAddTicketWindow.resx">
       <DependentUpon>AdminAddTicketWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminDeleteRouteWindow.resx">
+    <EmbeddedResource Include="Admin\Route\AdminDeleteRouteWindow.resx">
       <DependentUpon>AdminDeleteRouteWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminDeleteTicketWindow.resx">
+    <EmbeddedResource Include="Admin\Ticket\AdminDeleteTicketWindow.resx">
       <DependentUpon>AdminDeleteTicketWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminEditRouteWindow.resx">
+    <EmbeddedResource Include="Admin\Route\AdminEditRouteWindow.resx">
       <DependentUpon>AdminEditRouteWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminPanelWindowForm.resx">
       <DependentUpon>AdminPanelWindowForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminTicketEditWindow.resx">
+    <EmbeddedResource Include="Admin\Ticket\AdminTicketEditWindow.resx">
       <DependentUpon>AdminTicketEditWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\DeleteTransportWindow.resx">
+    <EmbeddedResource Include="Admin\Transport\DeleteTransportWindow.resx">
       <DependentUpon>DeleteTransportWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\EditTransportWindow.resx">
+    <EmbeddedResource Include="Admin\Transport\EditTransportWindow.resx">
       <DependentUpon>EditTransportWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashier\CashierMainWindow.resx">

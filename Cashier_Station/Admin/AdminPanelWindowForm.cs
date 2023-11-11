@@ -71,5 +71,11 @@ namespace Cashier_Station
             var deletetransp = new DeleteTransportWindow();
             deletetransp.ShowDialog();
         }
+
+        private void IntermediateRouteBtn_Click(object sender, EventArgs e)
+        {
+            var openaboutinter = new InterMediateRouteWindow();
+            openaboutinter.ShowDialog();
+        }
     }
 }

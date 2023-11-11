@@ -41,7 +41,7 @@
             this.EditTransportButton = new System.Windows.Forms.Button();
             this.AddtransportButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.IntermediateRouteBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -214,18 +214,19 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Транспорт";
             // 
-            // button1
+            // IntermediateRouteBtn
             // 
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(388, 449);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 58);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Проміжні станції";
-            this.button1.UseVisualStyleBackColor = true;
+            this.IntermediateRouteBtn.FlatAppearance.BorderSize = 3;
+            this.IntermediateRouteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IntermediateRouteBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.IntermediateRouteBtn.ForeColor = System.Drawing.Color.White;
+            this.IntermediateRouteBtn.Location = new System.Drawing.Point(388, 449);
+            this.IntermediateRouteBtn.Name = "IntermediateRouteBtn";
+            this.IntermediateRouteBtn.Size = new System.Drawing.Size(228, 58);
+            this.IntermediateRouteBtn.TabIndex = 15;
+            this.IntermediateRouteBtn.Text = "Проміжні станції";
+            this.IntermediateRouteBtn.UseVisualStyleBackColor = true;
+            this.IntermediateRouteBtn.Click += new System.EventHandler(this.IntermediateRouteBtn_Click);
             // 
             // AdminPanelWindowForm
             // 
@@ -233,7 +234,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1000, 519);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.IntermediateRouteBtn);
             this.Controls.Add(this.DeleteTransportButton);
             this.Controls.Add(this.EditTransportButton);
             this.Controls.Add(this.AddtransportButton);
@@ -270,6 +271,6 @@
         private System.Windows.Forms.Button EditTransportButton;
         private System.Windows.Forms.Button AddtransportButton;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button IntermediateRouteBtn;
     }
 }
