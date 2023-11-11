@@ -32,11 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.AddTicketButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.EditTicketButton = new System.Windows.Forms.Button();
+            this.DeleteTicketButton = new System.Windows.Forms.Button();
+            this.AddRouteButton = new System.Windows.Forms.Button();
+            this.EditRouteButton = new System.Windows.Forms.Button();
+            this.DeleteRouteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -86,75 +86,75 @@
             this.AddTicketButton.UseVisualStyleBackColor = true;
             this.AddTicketButton.Click += new System.EventHandler(this.AddTicketButton_Click);
             // 
-            // button1
+            // EditTicketButton
             // 
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(169, 266);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 58);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Редагувати";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.EditTicketButton.FlatAppearance.BorderSize = 3;
+            this.EditTicketButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditTicketButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditTicketButton.ForeColor = System.Drawing.Color.White;
+            this.EditTicketButton.Location = new System.Drawing.Point(169, 266);
+            this.EditTicketButton.Name = "EditTicketButton";
+            this.EditTicketButton.Size = new System.Drawing.Size(228, 58);
+            this.EditTicketButton.TabIndex = 6;
+            this.EditTicketButton.Text = "Редагувати";
+            this.EditTicketButton.UseVisualStyleBackColor = true;
+            this.EditTicketButton.Click += new System.EventHandler(this.EditTicketButton_Click);
             // 
-            // button2
+            // DeleteTicketButton
             // 
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(169, 364);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(228, 58);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Видалити";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.DeleteTicketButton.FlatAppearance.BorderSize = 3;
+            this.DeleteTicketButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteTicketButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteTicketButton.ForeColor = System.Drawing.Color.White;
+            this.DeleteTicketButton.Location = new System.Drawing.Point(169, 364);
+            this.DeleteTicketButton.Name = "DeleteTicketButton";
+            this.DeleteTicketButton.Size = new System.Drawing.Size(228, 58);
+            this.DeleteTicketButton.TabIndex = 7;
+            this.DeleteTicketButton.Text = "Видалити";
+            this.DeleteTicketButton.UseVisualStyleBackColor = true;
+            this.DeleteTicketButton.Click += new System.EventHandler(this.DeleteTicketButton_Click);
             // 
-            // button3
+            // AddRouteButton
             // 
-            this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(606, 171);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(228, 58);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Додати";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.AddRouteButton.FlatAppearance.BorderSize = 3;
+            this.AddRouteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddRouteButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddRouteButton.ForeColor = System.Drawing.Color.White;
+            this.AddRouteButton.Location = new System.Drawing.Point(606, 171);
+            this.AddRouteButton.Name = "AddRouteButton";
+            this.AddRouteButton.Size = new System.Drawing.Size(228, 58);
+            this.AddRouteButton.TabIndex = 8;
+            this.AddRouteButton.Text = "Додати";
+            this.AddRouteButton.UseVisualStyleBackColor = true;
+            this.AddRouteButton.Click += new System.EventHandler(this.AddRouteButton_Click);
             // 
-            // button4
+            // EditRouteButton
             // 
-            this.button4.FlatAppearance.BorderSize = 3;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(606, 266);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(228, 58);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Редагувати";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.EditRouteButton.FlatAppearance.BorderSize = 3;
+            this.EditRouteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditRouteButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditRouteButton.ForeColor = System.Drawing.Color.White;
+            this.EditRouteButton.Location = new System.Drawing.Point(606, 266);
+            this.EditRouteButton.Name = "EditRouteButton";
+            this.EditRouteButton.Size = new System.Drawing.Size(228, 58);
+            this.EditRouteButton.TabIndex = 9;
+            this.EditRouteButton.Text = "Редагувати";
+            this.EditRouteButton.UseVisualStyleBackColor = true;
+            this.EditRouteButton.Click += new System.EventHandler(this.EditRouteButton_Click);
             // 
-            // button5
+            // DeleteRouteButton
             // 
-            this.button5.FlatAppearance.BorderSize = 3;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(606, 364);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(228, 58);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "Видалити";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.DeleteRouteButton.FlatAppearance.BorderSize = 3;
+            this.DeleteRouteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteRouteButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteRouteButton.ForeColor = System.Drawing.Color.White;
+            this.DeleteRouteButton.Location = new System.Drawing.Point(606, 364);
+            this.DeleteRouteButton.Name = "DeleteRouteButton";
+            this.DeleteRouteButton.Size = new System.Drawing.Size(228, 58);
+            this.DeleteRouteButton.TabIndex = 10;
+            this.DeleteRouteButton.Text = "Видалити";
+            this.DeleteRouteButton.UseVisualStyleBackColor = true;
+            this.DeleteRouteButton.Click += new System.EventHandler(this.DeleteRouteButton_Click);
             // 
             // AdminPanelWindowForm
             // 
@@ -162,11 +162,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1000, 519);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.DeleteRouteButton);
+            this.Controls.Add(this.EditRouteButton);
+            this.Controls.Add(this.AddRouteButton);
+            this.Controls.Add(this.DeleteTicketButton);
+            this.Controls.Add(this.EditTicketButton);
             this.Controls.Add(this.AddTicketButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -185,10 +185,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button AddTicketButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button EditTicketButton;
+        private System.Windows.Forms.Button DeleteTicketButton;
+        private System.Windows.Forms.Button AddRouteButton;
+        private System.Windows.Forms.Button EditRouteButton;
+        private System.Windows.Forms.Button DeleteRouteButton;
     }
 }

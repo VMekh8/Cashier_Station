@@ -35,11 +35,11 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TicketGridView = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -115,14 +115,14 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Кількість проданих квитків";
             // 
-            // dataGridView1
+            // TicketGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 213);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(909, 294);
-            this.dataGridView1.TabIndex = 10;
+            this.TicketGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TicketGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TicketGridView.Location = new System.Drawing.Point(42, 213);
+            this.TicketGridView.Name = "TicketGridView";
+            this.TicketGridView.Size = new System.Drawing.Size(909, 294);
+            this.TicketGridView.TabIndex = 10;
             // 
             // label6
             // 
@@ -142,7 +142,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1000, 519);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.TicketGridView);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -155,7 +155,7 @@
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,7 +170,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView TicketGridView;
         private System.Windows.Forms.Label label6;
     }
 }

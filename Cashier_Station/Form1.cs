@@ -39,51 +39,51 @@ namespace Cashier_Station
             Application.Exit();
         }
 
-        private void label1_MouseHover(object sender, EventArgs e)
+        private void Mainlabel_MouseHover(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.Gray;
+            Mainlabel.ForeColor = Color.Gray;
         }
 
-        private void label1_MouseLeave(object sender, EventArgs e)
+        private void Mainlabel_MouseLeave(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.White;
-
-        }
-
-        private void label3_MouseHover(object sender, EventArgs e)
-        {
-            label3.ForeColor = Color.Gray;
+            Mainlabel.ForeColor = Color.White;
 
         }
 
-        private void label3_MouseLeave(object sender, EventArgs e)
+        private void CashierLabel_MouseHover(object sender, EventArgs e)
         {
-            label3.ForeColor = Color.White;
+            CashierLabel.ForeColor = Color.Gray;
 
         }
 
-        private void label2_MouseHover(object sender, EventArgs e)
+        private void CashierLabel_MouseLeave(object sender, EventArgs e)
         {
-            label2.ForeColor = Color.Gray;
+            CashierLabel.ForeColor = Color.White;
 
         }
 
-        private void label2_MouseLeave(object sender, EventArgs e)
+        private void AdminLabel_MouseHover(object sender, EventArgs e)
         {
-            label2.ForeColor = Color.White;
+            AdminLabel.ForeColor = Color.Gray;
+
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void AdminLabel_MouseLeave(object sender, EventArgs e)
+        {
+            AdminLabel.ForeColor = Color.White;
+        }
+
+        private void Mainlabel_Click(object sender, EventArgs e)
         {
             OpenInWindow(new MainWindowForm(this));
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void CashierLabel_Click(object sender, EventArgs e)
         {
             OpenInWindow(new CashierMainWindow());
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void AdminLabel_Click(object sender, EventArgs e)
         {
             OpenInWindow(new AdminPanelWindowForm());
         }

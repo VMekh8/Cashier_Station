@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.NavPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.HorizontalLinePanel = new System.Windows.Forms.Panel();
+            this.CashierLabel = new System.Windows.Forms.Label();
+            this.AdminLabel = new System.Windows.Forms.Label();
+            this.Mainlabel = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.PanelWindow = new System.Windows.Forms.Panel();
             this.NavPanel.SuspendLayout();
@@ -41,10 +41,10 @@
             // NavPanel
             // 
             this.NavPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.NavPanel.Controls.Add(this.panel1);
-            this.NavPanel.Controls.Add(this.label3);
-            this.NavPanel.Controls.Add(this.label2);
-            this.NavPanel.Controls.Add(this.label1);
+            this.NavPanel.Controls.Add(this.HorizontalLinePanel);
+            this.NavPanel.Controls.Add(this.CashierLabel);
+            this.NavPanel.Controls.Add(this.AdminLabel);
+            this.NavPanel.Controls.Add(this.Mainlabel);
             this.NavPanel.Controls.Add(this.ExitButton);
             this.NavPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.NavPanel.Location = new System.Drawing.Point(0, 0);
@@ -52,55 +52,55 @@
             this.NavPanel.Size = new System.Drawing.Size(1000, 121);
             this.NavPanel.TabIndex = 0;
             // 
-            // panel1
+            // HorizontalLinePanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(153, 94);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 3);
-            this.panel1.TabIndex = 5;
+            this.HorizontalLinePanel.BackColor = System.Drawing.Color.White;
+            this.HorizontalLinePanel.Location = new System.Drawing.Point(153, 94);
+            this.HorizontalLinePanel.Name = "HorizontalLinePanel";
+            this.HorizontalLinePanel.Size = new System.Drawing.Size(750, 3);
+            this.HorizontalLinePanel.TabIndex = 5;
             // 
-            // label3
+            // CashierLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(475, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 32);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Каса";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
-            this.label3.MouseHover += new System.EventHandler(this.label3_MouseHover);
+            this.CashierLabel.AutoSize = true;
+            this.CashierLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CashierLabel.ForeColor = System.Drawing.Color.White;
+            this.CashierLabel.Location = new System.Drawing.Point(475, 49);
+            this.CashierLabel.Name = "CashierLabel";
+            this.CashierLabel.Size = new System.Drawing.Size(66, 32);
+            this.CashierLabel.TabIndex = 4;
+            this.CashierLabel.Text = "Каса";
+            this.CashierLabel.Click += new System.EventHandler(this.CashierLabel_Click);
+            this.CashierLabel.MouseLeave += new System.EventHandler(this.CashierLabel_MouseLeave);
+            this.CashierLabel.MouseHover += new System.EventHandler(this.CashierLabel_MouseHover);
             // 
-            // label2
+            // AdminLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(626, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 32);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Адмін Панель";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
-            this.label2.MouseHover += new System.EventHandler(this.label2_MouseHover);
+            this.AdminLabel.AutoSize = true;
+            this.AdminLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminLabel.ForeColor = System.Drawing.Color.White;
+            this.AdminLabel.Location = new System.Drawing.Point(626, 49);
+            this.AdminLabel.Name = "AdminLabel";
+            this.AdminLabel.Size = new System.Drawing.Size(174, 32);
+            this.AdminLabel.TabIndex = 3;
+            this.AdminLabel.Text = "Адмін Панель";
+            this.AdminLabel.Click += new System.EventHandler(this.AdminLabel_Click);
+            this.AdminLabel.MouseLeave += new System.EventHandler(this.AdminLabel_MouseLeave);
+            this.AdminLabel.MouseHover += new System.EventHandler(this.AdminLabel_MouseHover);
             // 
-            // label1
+            // Mainlabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(260, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 32);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Головна";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
-            this.label1.MouseHover += new System.EventHandler(this.label1_MouseHover);
+            this.Mainlabel.AutoSize = true;
+            this.Mainlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mainlabel.ForeColor = System.Drawing.Color.White;
+            this.Mainlabel.Location = new System.Drawing.Point(260, 49);
+            this.Mainlabel.Name = "Mainlabel";
+            this.Mainlabel.Size = new System.Drawing.Size(105, 32);
+            this.Mainlabel.TabIndex = 2;
+            this.Mainlabel.Text = "Головна";
+            this.Mainlabel.Click += new System.EventHandler(this.Mainlabel_Click);
+            this.Mainlabel.MouseLeave += new System.EventHandler(this.Mainlabel_MouseLeave);
+            this.Mainlabel.MouseHover += new System.EventHandler(this.Mainlabel_MouseHover);
             // 
             // ExitButton
             // 
@@ -145,10 +145,10 @@
 
         private System.Windows.Forms.Panel NavPanel;
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label CashierLabel;
+        private System.Windows.Forms.Label AdminLabel;
+        private System.Windows.Forms.Label Mainlabel;
+        private System.Windows.Forms.Panel HorizontalLinePanel;
         public System.Windows.Forms.Panel PanelWindow;
     }
 }

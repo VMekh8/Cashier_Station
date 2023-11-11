@@ -28,39 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GotoRouteButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ClientInfoButton = new System.Windows.Forms.Button();
+            this.FindBySurButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.UsrnameTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.SurNameTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // GotoRouteButton
+            // ClientInfoButton
             // 
-            this.GotoRouteButton.FlatAppearance.BorderSize = 3;
-            this.GotoRouteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GotoRouteButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GotoRouteButton.ForeColor = System.Drawing.Color.White;
-            this.GotoRouteButton.Location = new System.Drawing.Point(44, 119);
-            this.GotoRouteButton.Name = "GotoRouteButton";
-            this.GotoRouteButton.Size = new System.Drawing.Size(244, 73);
-            this.GotoRouteButton.TabIndex = 7;
-            this.GotoRouteButton.Text = "Інформація про клієнтів";
-            this.GotoRouteButton.UseVisualStyleBackColor = true;
+            this.ClientInfoButton.FlatAppearance.BorderSize = 3;
+            this.ClientInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClientInfoButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ClientInfoButton.ForeColor = System.Drawing.Color.White;
+            this.ClientInfoButton.Location = new System.Drawing.Point(44, 119);
+            this.ClientInfoButton.Name = "ClientInfoButton";
+            this.ClientInfoButton.Size = new System.Drawing.Size(244, 73);
+            this.ClientInfoButton.TabIndex = 7;
+            this.ClientInfoButton.Text = "Інформація про клієнтів";
+            this.ClientInfoButton.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // FindBySurButton
             // 
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(691, 119);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(262, 70);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Пошук квитків за прізвищем";
-            this.button1.UseVisualStyleBackColor = true;
+            this.FindBySurButton.FlatAppearance.BorderSize = 3;
+            this.FindBySurButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindBySurButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FindBySurButton.ForeColor = System.Drawing.Color.White;
+            this.FindBySurButton.Location = new System.Drawing.Point(691, 119);
+            this.FindBySurButton.Name = "FindBySurButton";
+            this.FindBySurButton.Size = new System.Drawing.Size(262, 70);
+            this.FindBySurButton.TabIndex = 8;
+            this.FindBySurButton.Text = "Пошук квитків за прізвищем";
+            this.FindBySurButton.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -71,23 +71,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(909, 294);
             this.dataGridView1.TabIndex = 9;
             // 
-            // UsrnameTextBox
+            // SurNameTextBox
             // 
-            this.UsrnameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.UsrnameTextBox.BorderColorFocused = System.Drawing.Color.Gray;
-            this.UsrnameTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.UsrnameTextBox.BorderColorMouseHover = System.Drawing.Color.Gray;
-            this.UsrnameTextBox.BorderThickness = 3;
-            this.UsrnameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.UsrnameTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UsrnameTextBox.ForeColor = System.Drawing.Color.White;
-            this.UsrnameTextBox.isPassword = false;
-            this.UsrnameTextBox.Location = new System.Drawing.Point(410, 119);
-            this.UsrnameTextBox.Margin = new System.Windows.Forms.Padding(5);
-            this.UsrnameTextBox.Name = "UsrnameTextBox";
-            this.UsrnameTextBox.Size = new System.Drawing.Size(273, 70);
-            this.UsrnameTextBox.TabIndex = 10;
-            this.UsrnameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.SurNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.SurNameTextBox.BorderColorFocused = System.Drawing.Color.Gray;
+            this.SurNameTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SurNameTextBox.BorderColorMouseHover = System.Drawing.Color.Gray;
+            this.SurNameTextBox.BorderThickness = 3;
+            this.SurNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SurNameTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SurNameTextBox.ForeColor = System.Drawing.Color.White;
+            this.SurNameTextBox.isPassword = false;
+            this.SurNameTextBox.Location = new System.Drawing.Point(410, 119);
+            this.SurNameTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.SurNameTextBox.Name = "SurNameTextBox";
+            this.SurNameTextBox.Size = new System.Drawing.Size(273, 70);
+            this.SurNameTextBox.TabIndex = 10;
+            this.SurNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label1
             // 
@@ -107,10 +107,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1000, 519);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.UsrnameTextBox);
+            this.Controls.Add(this.SurNameTextBox);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.GotoRouteButton);
+            this.Controls.Add(this.FindBySurButton);
+            this.Controls.Add(this.ClientInfoButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClientWindowForm";
             this.Text = "ClientWindowForm";
@@ -122,10 +122,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button GotoRouteButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ClientInfoButton;
+        private System.Windows.Forms.Button FindBySurButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox UsrnameTextBox;
+        private Bunifu.Framework.UI.BunifuMetroTextbox SurNameTextBox;
         private System.Windows.Forms.Label label1;
     }
 }

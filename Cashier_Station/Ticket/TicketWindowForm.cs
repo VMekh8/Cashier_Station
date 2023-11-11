@@ -19,13 +19,13 @@ namespace Cashier_Station
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BuyTicketButton_Click(object sender, EventArgs e)
         {
             var ticketbuy = new BuyTicketAuthorization();
             ticketbuy.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void ReturnTicketButton_Click(object sender, EventArgs e)
         {
             var ticketreturn = new ReturnTicketWindow();
             ticketreturn.ShowDialog();

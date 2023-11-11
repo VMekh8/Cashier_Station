@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.RouteGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.StartPointTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label2 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.EndPointTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.AnalyseButton = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.RouteGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // RouteGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 51);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(909, 294);
-            this.dataGridView1.TabIndex = 4;
+            this.RouteGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.RouteGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RouteGridView.Location = new System.Drawing.Point(41, 51);
+            this.RouteGridView.Name = "RouteGridView";
+            this.RouteGridView.Size = new System.Drawing.Size(909, 294);
+            this.RouteGridView.TabIndex = 4;
             // 
             // label1
             // 
@@ -69,23 +70,23 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Введіть точку відправлення";
             // 
-            // bunifuMetroTextbox1
+            // StartPointTextBox
             // 
-            this.bunifuMetroTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox1.BorderThickness = 3;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(334, 393);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(321, 35);
-            this.bunifuMetroTextbox1.TabIndex = 6;
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.StartPointTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.StartPointTextBox.BorderColorFocused = System.Drawing.Color.Gray;
+            this.StartPointTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.StartPointTextBox.BorderColorMouseHover = System.Drawing.Color.Gray;
+            this.StartPointTextBox.BorderThickness = 3;
+            this.StartPointTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.StartPointTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StartPointTextBox.ForeColor = System.Drawing.Color.White;
+            this.StartPointTextBox.isPassword = false;
+            this.StartPointTextBox.Location = new System.Drawing.Point(334, 393);
+            this.StartPointTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.StartPointTextBox.Name = "StartPointTextBox";
+            this.StartPointTextBox.Size = new System.Drawing.Size(321, 35);
+            this.StartPointTextBox.TabIndex = 6;
+            this.StartPointTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label2
             // 
@@ -98,36 +99,50 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Введіть точку прибуття";
             // 
-            // bunifuMetroTextbox2
+            // EndPointTextBox
             // 
-            this.bunifuMetroTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox2.BorderThickness = 3;
-            this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox2.isPassword = false;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(333, 472);
-            this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
-            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(321, 35);
-            this.bunifuMetroTextbox2.TabIndex = 8;
-            this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.EndPointTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.EndPointTextBox.BorderColorFocused = System.Drawing.Color.Gray;
+            this.EndPointTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EndPointTextBox.BorderColorMouseHover = System.Drawing.Color.Gray;
+            this.EndPointTextBox.BorderThickness = 3;
+            this.EndPointTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.EndPointTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EndPointTextBox.ForeColor = System.Drawing.Color.White;
+            this.EndPointTextBox.isPassword = false;
+            this.EndPointTextBox.Location = new System.Drawing.Point(333, 472);
+            this.EndPointTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.EndPointTextBox.Name = "EndPointTextBox";
+            this.EndPointTextBox.Size = new System.Drawing.Size(321, 35);
+            this.EndPointTextBox.TabIndex = 8;
+            this.EndPointTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // button1
+            // AnalyseButton
             // 
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(719, 440);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 67);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Аналіз";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AnalyseButton.FlatAppearance.BorderSize = 3;
+            this.AnalyseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AnalyseButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AnalyseButton.ForeColor = System.Drawing.Color.White;
+            this.AnalyseButton.Location = new System.Drawing.Point(719, 440);
+            this.AnalyseButton.Name = "AnalyseButton";
+            this.AnalyseButton.Size = new System.Drawing.Size(231, 67);
+            this.AnalyseButton.TabIndex = 10;
+            this.AnalyseButton.Text = "Аналіз";
+            this.AnalyseButton.UseVisualStyleBackColor = true;
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.FlatAppearance.BorderSize = 0;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExitButton.ForeColor = System.Drawing.Color.White;
+            this.ExitButton.Location = new System.Drawing.Point(969, 0);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(31, 25);
+            this.ExitButton.TabIndex = 11;
+            this.ExitButton.Text = "X";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // FrequencyWindowForm
             // 
@@ -135,17 +150,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1000, 519);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ExitButton);
+            this.Controls.Add(this.AnalyseButton);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.bunifuMetroTextbox2);
+            this.Controls.Add(this.EndPointTextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.bunifuMetroTextbox1);
+            this.Controls.Add(this.StartPointTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.RouteGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrequencyWindowForm";
             this.Text = "FrequencyWindowForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RouteGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,12 +169,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView RouteGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox StartPointTextBox;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
-        private System.Windows.Forms.Button button1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox EndPointTextBox;
+        private System.Windows.Forms.Button AnalyseButton;
+        private System.Windows.Forms.Button ExitButton;
     }
 }

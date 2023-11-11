@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.RouteGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.SubmitButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.LongestRouteName = new System.Windows.Forms.Label();
+            this.LongestRouteRange = new System.Windows.Forms.Label();
+            this.AnalyseRouteButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.RouteGridView)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // RouteGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 197);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(909, 294);
-            this.dataGridView1.TabIndex = 0;
+            this.RouteGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.RouteGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RouteGridView.Location = new System.Drawing.Point(43, 197);
+            this.RouteGridView.Name = "RouteGridView";
+            this.RouteGridView.Size = new System.Drawing.Size(909, 294);
+            this.RouteGridView.TabIndex = 0;
             // 
             // label1
             // 
@@ -73,48 +73,48 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.flowLayoutPanel1.Controls.Add(this.label3);
-            this.flowLayoutPanel1.Controls.Add(this.label4);
+            this.flowLayoutPanel1.Controls.Add(this.LongestRouteName);
+            this.flowLayoutPanel1.Controls.Add(this.LongestRouteRange);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(43, 97);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(327, 85);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
-            // label3
+            // LongestRouteName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 16.75F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(270, 31);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Найдовший маршрут";
+            this.LongestRouteName.AutoSize = true;
+            this.LongestRouteName.Font = new System.Drawing.Font("Microsoft YaHei", 16.75F, System.Drawing.FontStyle.Bold);
+            this.LongestRouteName.ForeColor = System.Drawing.Color.White;
+            this.LongestRouteName.Location = new System.Drawing.Point(3, 0);
+            this.LongestRouteName.Name = "LongestRouteName";
+            this.LongestRouteName.Size = new System.Drawing.Size(270, 31);
+            this.LongestRouteName.TabIndex = 4;
+            this.LongestRouteName.Text = "Найдовший маршрут";
             // 
-            // label4
+            // LongestRouteRange
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 13.75F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(230, 26);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Найдовший маршрут";
+            this.LongestRouteRange.AutoSize = true;
+            this.LongestRouteRange.Font = new System.Drawing.Font("Microsoft YaHei", 13.75F, System.Drawing.FontStyle.Bold);
+            this.LongestRouteRange.ForeColor = System.Drawing.Color.White;
+            this.LongestRouteRange.Location = new System.Drawing.Point(3, 31);
+            this.LongestRouteRange.Name = "LongestRouteRange";
+            this.LongestRouteRange.Size = new System.Drawing.Size(230, 26);
+            this.LongestRouteRange.TabIndex = 5;
+            this.LongestRouteRange.Text = "Найдовший маршрут";
             // 
-            // SubmitButton
+            // AnalyseRouteButton
             // 
-            this.SubmitButton.FlatAppearance.BorderSize = 3;
-            this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SubmitButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SubmitButton.ForeColor = System.Drawing.Color.White;
-            this.SubmitButton.Location = new System.Drawing.Point(636, 128);
-            this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(316, 54);
-            this.SubmitButton.TabIndex = 4;
-            this.SubmitButton.Text = "Аналіз частоти відправлень";
-            this.SubmitButton.UseVisualStyleBackColor = true;
-            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
+            this.AnalyseRouteButton.FlatAppearance.BorderSize = 3;
+            this.AnalyseRouteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AnalyseRouteButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AnalyseRouteButton.ForeColor = System.Drawing.Color.White;
+            this.AnalyseRouteButton.Location = new System.Drawing.Point(636, 128);
+            this.AnalyseRouteButton.Name = "AnalyseRouteButton";
+            this.AnalyseRouteButton.Size = new System.Drawing.Size(316, 54);
+            this.AnalyseRouteButton.TabIndex = 4;
+            this.AnalyseRouteButton.Text = "Аналіз частоти відправлень";
+            this.AnalyseRouteButton.UseVisualStyleBackColor = true;
+            this.AnalyseRouteButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // RouteWindow
             // 
@@ -122,15 +122,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1000, 519);
-            this.Controls.Add(this.SubmitButton);
+            this.Controls.Add(this.AnalyseRouteButton);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.RouteGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RouteWindow";
             this.Text = "RouteWindow";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RouteGridView)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -140,12 +140,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView RouteGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.Label LongestRouteName;
+        private System.Windows.Forms.Label LongestRouteRange;
+        private System.Windows.Forms.Button AnalyseRouteButton;
     }
 }

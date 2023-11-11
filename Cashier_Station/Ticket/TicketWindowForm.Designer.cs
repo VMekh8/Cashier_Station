@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TicketGridView = new System.Windows.Forms.DataGridView();
             this.UsrnameTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.TicketDatePicker = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.FindSeatButton = new System.Windows.Forms.Button();
+            this.BuyTicketButton = new System.Windows.Forms.Button();
+            this.ReturnTicketButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -49,14 +49,14 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Квитки";
             // 
-            // dataGridView1
+            // TicketGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 51);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(909, 294);
-            this.dataGridView1.TabIndex = 3;
+            this.TicketGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TicketGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TicketGridView.Location = new System.Drawing.Point(41, 51);
+            this.TicketGridView.Name = "TicketGridView";
+            this.TicketGridView.Size = new System.Drawing.Size(909, 294);
+            this.TicketGridView.TabIndex = 3;
             // 
             // UsrnameTextBox
             // 
@@ -76,59 +76,59 @@
             this.UsrnameTextBox.TabIndex = 4;
             this.UsrnameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuDatepicker1
+            // TicketDatePicker
             // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(413, 415);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(314, 36);
-            this.bunifuDatepicker1.TabIndex = 5;
-            this.bunifuDatepicker1.Value = new System.DateTime(2023, 11, 6, 18, 47, 4, 486);
+            this.TicketDatePicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.TicketDatePicker.BorderRadius = 0;
+            this.TicketDatePicker.ForeColor = System.Drawing.Color.White;
+            this.TicketDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.TicketDatePicker.FormatCustom = null;
+            this.TicketDatePicker.Location = new System.Drawing.Point(413, 415);
+            this.TicketDatePicker.Name = "TicketDatePicker";
+            this.TicketDatePicker.Size = new System.Drawing.Size(314, 36);
+            this.TicketDatePicker.TabIndex = 5;
+            this.TicketDatePicker.Value = new System.DateTime(2023, 11, 6, 18, 47, 4, 486);
             // 
-            // button1
+            // FindSeatButton
             // 
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(735, 361);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(215, 90);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Знайти місця";
-            this.button1.UseVisualStyleBackColor = true;
+            this.FindSeatButton.FlatAppearance.BorderSize = 3;
+            this.FindSeatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindSeatButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FindSeatButton.ForeColor = System.Drawing.Color.White;
+            this.FindSeatButton.Location = new System.Drawing.Point(735, 361);
+            this.FindSeatButton.Name = "FindSeatButton";
+            this.FindSeatButton.Size = new System.Drawing.Size(215, 90);
+            this.FindSeatButton.TabIndex = 7;
+            this.FindSeatButton.Text = "Знайти місця";
+            this.FindSeatButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BuyTicketButton
             // 
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(41, 361);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(215, 46);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Купити квиток";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BuyTicketButton.FlatAppearance.BorderSize = 3;
+            this.BuyTicketButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BuyTicketButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BuyTicketButton.ForeColor = System.Drawing.Color.White;
+            this.BuyTicketButton.Location = new System.Drawing.Point(41, 361);
+            this.BuyTicketButton.Name = "BuyTicketButton";
+            this.BuyTicketButton.Size = new System.Drawing.Size(215, 46);
+            this.BuyTicketButton.TabIndex = 8;
+            this.BuyTicketButton.Text = "Купити квиток";
+            this.BuyTicketButton.UseVisualStyleBackColor = true;
+            this.BuyTicketButton.Click += new System.EventHandler(this.BuyTicketButton_Click);
             // 
-            // button3
+            // ReturnTicketButton
             // 
-            this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(41, 415);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(215, 46);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Повернути квиток";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.ReturnTicketButton.FlatAppearance.BorderSize = 3;
+            this.ReturnTicketButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReturnTicketButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReturnTicketButton.ForeColor = System.Drawing.Color.White;
+            this.ReturnTicketButton.Location = new System.Drawing.Point(41, 415);
+            this.ReturnTicketButton.Name = "ReturnTicketButton";
+            this.ReturnTicketButton.Size = new System.Drawing.Size(215, 46);
+            this.ReturnTicketButton.TabIndex = 9;
+            this.ReturnTicketButton.Text = "Повернути квиток";
+            this.ReturnTicketButton.UseVisualStyleBackColor = true;
+            this.ReturnTicketButton.Click += new System.EventHandler(this.ReturnTicketButton_Click);
             // 
             // TicketWindowForm
             // 
@@ -136,17 +136,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1000, 519);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.bunifuDatepicker1);
+            this.Controls.Add(this.ReturnTicketButton);
+            this.Controls.Add(this.BuyTicketButton);
+            this.Controls.Add(this.FindSeatButton);
+            this.Controls.Add(this.TicketDatePicker);
             this.Controls.Add(this.UsrnameTextBox);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.TicketGridView);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TicketWindowForm";
             this.Text = "TicketWindowForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,11 +155,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView TicketGridView;
         private Bunifu.Framework.UI.BunifuMetroTextbox UsrnameTextBox;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private Bunifu.Framework.UI.BunifuDatepicker TicketDatePicker;
+        private System.Windows.Forms.Button FindSeatButton;
+        private System.Windows.Forms.Button BuyTicketButton;
+        private System.Windows.Forms.Button ReturnTicketButton;
     }
 }

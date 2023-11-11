@@ -25,13 +25,13 @@ namespace Cashier_Station
             mainWindow.OpenInWindow(route);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void GotTicketButton_Click(object sender, EventArgs e)
         {
             var ticket = new TicketWindowForm();
             mainWindow.OpenInWindow(ticket);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void GoToClientButton_Click(object sender, EventArgs e)
         {
             var client = new ClientWindowForm();
             mainWindow.OpenInWindow(client);

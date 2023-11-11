@@ -30,9 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TicketNumberDropDown = new Bunifu.Framework.UI.BunifuDropdown();
             this.label4 = new System.Windows.Forms.Label();
             this.SubmitButton = new System.Windows.Forms.Button();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,13 +51,28 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.panel1.Controls.Add(this.bunifuDropdown1);
+            this.panel1.Controls.Add(this.TicketNumberDropDown);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.SubmitButton);
             this.panel1.Location = new System.Drawing.Point(224, 70);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(570, 380);
             this.panel1.TabIndex = 2;
+            // 
+            // TicketNumberDropDown
+            // 
+            this.TicketNumberDropDown.BackColor = System.Drawing.Color.Transparent;
+            this.TicketNumberDropDown.BorderRadius = 3;
+            this.TicketNumberDropDown.DisabledColor = System.Drawing.Color.Gray;
+            this.TicketNumberDropDown.ForeColor = System.Drawing.Color.White;
+            this.TicketNumberDropDown.Items = new string[0];
+            this.TicketNumberDropDown.Location = new System.Drawing.Point(37, 107);
+            this.TicketNumberDropDown.Name = "TicketNumberDropDown";
+            this.TicketNumberDropDown.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.TicketNumberDropDown.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.TicketNumberDropDown.selectedIndex = -1;
+            this.TicketNumberDropDown.Size = new System.Drawing.Size(500, 46);
+            this.TicketNumberDropDown.TabIndex = 6;
             // 
             // label4
             // 
@@ -82,20 +98,19 @@
             this.SubmitButton.Text = "Повернути";
             this.SubmitButton.UseVisualStyleBackColor = true;
             // 
-            // bunifuDropdown1
+            // ExitButton
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(37, 107);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(500, 46);
-            this.bunifuDropdown1.TabIndex = 6;
+            this.ExitButton.FlatAppearance.BorderSize = 0;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExitButton.ForeColor = System.Drawing.Color.White;
+            this.ExitButton.Location = new System.Drawing.Point(969, 0);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(31, 25);
+            this.ExitButton.TabIndex = 3;
+            this.ExitButton.Text = "X";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // ReturnTicketWindow
             // 
@@ -103,6 +118,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -121,6 +137,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button SubmitButton;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuDropdown TicketNumberDropDown;
+        private System.Windows.Forms.Button ExitButton;
     }
 }

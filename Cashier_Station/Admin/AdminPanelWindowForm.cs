@@ -23,31 +23,31 @@ namespace Cashier_Station
             addticket.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void AddRouteButton_Click(object sender, EventArgs e)
         {
             var addroute = new AdminAddRouteWindow();
             addroute.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void DeleteTicketButton_Click(object sender, EventArgs e)
         {
             var deleteTicket = new AdminDeleteTicketWindow();
             deleteTicket.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void DeleteRouteButton_Click(object sender, EventArgs e)
         {
             var deleteRoute = new AdminDeleteRouteWindow();
             deleteRoute.ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void EditRouteButton_Click(object sender, EventArgs e)
         {
             var editroute = new AdminEditRouteWindow();
             editroute.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void EditTicketButton_Click(object sender, EventArgs e)
         {
             var editticket = new AdminTicketEditWindow();
             editticket.ShowDialog();
