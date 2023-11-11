@@ -37,6 +37,10 @@
             this.AddRouteButton = new System.Windows.Forms.Button();
             this.EditRouteButton = new System.Windows.Forms.Button();
             this.DeleteRouteButton = new System.Windows.Forms.Button();
+            this.DeleteTransportButton = new System.Windows.Forms.Button();
+            this.EditTransportButton = new System.Windows.Forms.Button();
+            this.AddtransportButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -44,7 +48,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(396, 9);
+            this.label1.Location = new System.Drawing.Point(369, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 39);
             this.label1.TabIndex = 2;
@@ -55,7 +59,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(218, 99);
+            this.label2.Location = new System.Drawing.Point(79, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 39);
             this.label2.TabIndex = 3;
@@ -66,7 +70,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(634, 99);
+            this.label3.Location = new System.Drawing.Point(416, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 39);
             this.label3.TabIndex = 4;
@@ -78,7 +82,7 @@
             this.AddTicketButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddTicketButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddTicketButton.ForeColor = System.Drawing.Color.White;
-            this.AddTicketButton.Location = new System.Drawing.Point(169, 171);
+            this.AddTicketButton.Location = new System.Drawing.Point(30, 172);
             this.AddTicketButton.Name = "AddTicketButton";
             this.AddTicketButton.Size = new System.Drawing.Size(228, 58);
             this.AddTicketButton.TabIndex = 5;
@@ -92,7 +96,7 @@
             this.EditTicketButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditTicketButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EditTicketButton.ForeColor = System.Drawing.Color.White;
-            this.EditTicketButton.Location = new System.Drawing.Point(169, 266);
+            this.EditTicketButton.Location = new System.Drawing.Point(30, 267);
             this.EditTicketButton.Name = "EditTicketButton";
             this.EditTicketButton.Size = new System.Drawing.Size(228, 58);
             this.EditTicketButton.TabIndex = 6;
@@ -106,7 +110,7 @@
             this.DeleteTicketButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteTicketButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DeleteTicketButton.ForeColor = System.Drawing.Color.White;
-            this.DeleteTicketButton.Location = new System.Drawing.Point(169, 364);
+            this.DeleteTicketButton.Location = new System.Drawing.Point(30, 365);
             this.DeleteTicketButton.Name = "DeleteTicketButton";
             this.DeleteTicketButton.Size = new System.Drawing.Size(228, 58);
             this.DeleteTicketButton.TabIndex = 7;
@@ -120,7 +124,7 @@
             this.AddRouteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddRouteButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddRouteButton.ForeColor = System.Drawing.Color.White;
-            this.AddRouteButton.Location = new System.Drawing.Point(606, 171);
+            this.AddRouteButton.Location = new System.Drawing.Point(388, 172);
             this.AddRouteButton.Name = "AddRouteButton";
             this.AddRouteButton.Size = new System.Drawing.Size(228, 58);
             this.AddRouteButton.TabIndex = 8;
@@ -134,7 +138,7 @@
             this.EditRouteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditRouteButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EditRouteButton.ForeColor = System.Drawing.Color.White;
-            this.EditRouteButton.Location = new System.Drawing.Point(606, 266);
+            this.EditRouteButton.Location = new System.Drawing.Point(388, 267);
             this.EditRouteButton.Name = "EditRouteButton";
             this.EditRouteButton.Size = new System.Drawing.Size(228, 58);
             this.EditRouteButton.TabIndex = 9;
@@ -148,7 +152,7 @@
             this.DeleteRouteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteRouteButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DeleteRouteButton.ForeColor = System.Drawing.Color.White;
-            this.DeleteRouteButton.Location = new System.Drawing.Point(606, 364);
+            this.DeleteRouteButton.Location = new System.Drawing.Point(388, 365);
             this.DeleteRouteButton.Name = "DeleteRouteButton";
             this.DeleteRouteButton.Size = new System.Drawing.Size(228, 58);
             this.DeleteRouteButton.TabIndex = 10;
@@ -156,12 +160,66 @@
             this.DeleteRouteButton.UseVisualStyleBackColor = true;
             this.DeleteRouteButton.Click += new System.EventHandler(this.DeleteRouteButton_Click);
             // 
+            // DeleteTransportButton
+            // 
+            this.DeleteTransportButton.FlatAppearance.BorderSize = 3;
+            this.DeleteTransportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteTransportButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteTransportButton.ForeColor = System.Drawing.Color.White;
+            this.DeleteTransportButton.Location = new System.Drawing.Point(713, 365);
+            this.DeleteTransportButton.Name = "DeleteTransportButton";
+            this.DeleteTransportButton.Size = new System.Drawing.Size(228, 58);
+            this.DeleteTransportButton.TabIndex = 14;
+            this.DeleteTransportButton.Text = "Видалити";
+            this.DeleteTransportButton.UseVisualStyleBackColor = true;
+            // 
+            // EditTransportButton
+            // 
+            this.EditTransportButton.FlatAppearance.BorderSize = 3;
+            this.EditTransportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditTransportButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditTransportButton.ForeColor = System.Drawing.Color.White;
+            this.EditTransportButton.Location = new System.Drawing.Point(713, 267);
+            this.EditTransportButton.Name = "EditTransportButton";
+            this.EditTransportButton.Size = new System.Drawing.Size(228, 58);
+            this.EditTransportButton.TabIndex = 13;
+            this.EditTransportButton.Text = "Редагувати";
+            this.EditTransportButton.UseVisualStyleBackColor = true;
+            // 
+            // AddtransportButton
+            // 
+            this.AddtransportButton.FlatAppearance.BorderSize = 3;
+            this.AddtransportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddtransportButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddtransportButton.ForeColor = System.Drawing.Color.White;
+            this.AddtransportButton.Location = new System.Drawing.Point(713, 172);
+            this.AddtransportButton.Name = "AddtransportButton";
+            this.AddtransportButton.Size = new System.Drawing.Size(228, 58);
+            this.AddtransportButton.TabIndex = 12;
+            this.AddtransportButton.Text = "Додати";
+            this.AddtransportButton.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(741, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(176, 39);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Транспорт";
+            // 
             // AdminPanelWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1000, 519);
+            this.Controls.Add(this.DeleteTransportButton);
+            this.Controls.Add(this.EditTransportButton);
+            this.Controls.Add(this.AddtransportButton);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.DeleteRouteButton);
             this.Controls.Add(this.EditRouteButton);
             this.Controls.Add(this.AddRouteButton);
@@ -190,5 +248,9 @@
         private System.Windows.Forms.Button AddRouteButton;
         private System.Windows.Forms.Button EditRouteButton;
         private System.Windows.Forms.Button DeleteRouteButton;
+        private System.Windows.Forms.Button DeleteTransportButton;
+        private System.Windows.Forms.Button EditTransportButton;
+        private System.Windows.Forms.Button AddtransportButton;
+        private System.Windows.Forms.Label label4;
     }
 }

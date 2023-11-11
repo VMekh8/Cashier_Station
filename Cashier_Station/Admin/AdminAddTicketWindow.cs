@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cashier_Station.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +16,18 @@ namespace Cashier_Station
         public AdminAddTicketWindow()
         {
             InitializeComponent();
+            
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }
