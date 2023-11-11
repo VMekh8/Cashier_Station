@@ -118,6 +118,7 @@
     <Compile Include="Admin\AdminTicketEditWindow.Designer.cs">
       <DependentUpon>AdminTicketEditWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="CashierContext.cs" />
     <Compile Include="Cashier\CashierMainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
