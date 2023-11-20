@@ -16,17 +16,17 @@ namespace Cashier_Station.Admin
         }
 
 
-        private void FillDropDown()
-        {
-            try
-            {
+        //private void FillDropDown()
+        //{
+        //    try
+        //    {
                 
-            }
-            catch (Exception ex)
-            {
+        //    }
+        //    catch (Exception ex)
+        //    {
                 
-            }
-        }
+        //    }
+        //}
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
