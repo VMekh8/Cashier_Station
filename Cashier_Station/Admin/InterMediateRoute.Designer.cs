@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.SubmitButton = new System.Windows.Forms.Button();
+            this.ArrivalTime = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.DistanceToEnd = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DistanceFromStart = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.Routeid = new Bunifu.Framework.UI.BunifuDropdown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.NameTransportTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.RouteIdDelete = new Bunifu.Framework.UI.BunifuDropdown();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox5 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.NameStationDelete = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.ExitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -56,12 +56,12 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.SubmitButton);
-            this.panel1.Controls.Add(this.bunifuDatepicker1);
+            this.panel1.Controls.Add(this.ArrivalTime);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.bunifuMetroTextbox2);
+            this.panel1.Controls.Add(this.DistanceToEnd);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.bunifuMetroTextbox1);
-            this.panel1.Controls.Add(this.bunifuDropdown1);
+            this.panel1.Controls.Add(this.DistanceFromStart);
+            this.panel1.Controls.Add(this.Routeid);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.NameTransportTextBox);
@@ -69,6 +69,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(513, 495);
             this.panel1.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(31, 362);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(198, 31);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Дата прибуття";
             // 
             // SubmitButton
             // 
@@ -82,6 +93,96 @@
             this.SubmitButton.TabIndex = 3;
             this.SubmitButton.Text = "Додати";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
+            // 
+            // ArrivalTime
+            // 
+            this.ArrivalTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.ArrivalTime.BorderRadius = 0;
+            this.ArrivalTime.ForeColor = System.Drawing.Color.White;
+            this.ArrivalTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ArrivalTime.FormatCustom = "MM/dd/yyyy hh:mm:ss";
+            this.ArrivalTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ArrivalTime.Location = new System.Drawing.Point(37, 396);
+            this.ArrivalTime.Name = "ArrivalTime";
+            this.ArrivalTime.Size = new System.Drawing.Size(444, 46);
+            this.ArrivalTime.TabIndex = 27;
+            this.ArrivalTime.Value = new System.DateTime(2023, 11, 6, 18, 47, 4, 486);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(31, 274);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(365, 31);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Відстань до кінцевої станції";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // DistanceToEnd
+            // 
+            this.DistanceToEnd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.DistanceToEnd.BorderColorFocused = System.Drawing.Color.Gray;
+            this.DistanceToEnd.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.DistanceToEnd.BorderColorMouseHover = System.Drawing.Color.Gray;
+            this.DistanceToEnd.BorderThickness = 3;
+            this.DistanceToEnd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.DistanceToEnd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DistanceToEnd.ForeColor = System.Drawing.Color.White;
+            this.DistanceToEnd.isPassword = false;
+            this.DistanceToEnd.Location = new System.Drawing.Point(37, 310);
+            this.DistanceToEnd.Margin = new System.Windows.Forms.Padding(5);
+            this.DistanceToEnd.Name = "DistanceToEnd";
+            this.DistanceToEnd.Size = new System.Drawing.Size(444, 46);
+            this.DistanceToEnd.TabIndex = 25;
+            this.DistanceToEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(31, 177);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(406, 31);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Відстань від початкової станції";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // DistanceFromStart
+            // 
+            this.DistanceFromStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.DistanceFromStart.BorderColorFocused = System.Drawing.Color.Gray;
+            this.DistanceFromStart.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.DistanceFromStart.BorderColorMouseHover = System.Drawing.Color.Gray;
+            this.DistanceFromStart.BorderThickness = 3;
+            this.DistanceFromStart.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.DistanceFromStart.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DistanceFromStart.ForeColor = System.Drawing.Color.White;
+            this.DistanceFromStart.isPassword = false;
+            this.DistanceFromStart.Location = new System.Drawing.Point(37, 213);
+            this.DistanceFromStart.Margin = new System.Windows.Forms.Padding(5);
+            this.DistanceFromStart.Name = "DistanceFromStart";
+            this.DistanceFromStart.Size = new System.Drawing.Size(444, 46);
+            this.DistanceFromStart.TabIndex = 23;
+            this.DistanceFromStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // Routeid
+            // 
+            this.Routeid.BackColor = System.Drawing.Color.Transparent;
+            this.Routeid.BorderRadius = 3;
+            this.Routeid.DisabledColor = System.Drawing.Color.Gray;
+            this.Routeid.ForeColor = System.Drawing.Color.White;
+            this.Routeid.Items = new string[0];
+            this.Routeid.Location = new System.Drawing.Point(37, 36);
+            this.Routeid.Name = "Routeid";
+            this.Routeid.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.Routeid.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.Routeid.selectedIndex = -1;
+            this.Routeid.Size = new System.Drawing.Size(444, 46);
+            this.Routeid.TabIndex = 22;
             // 
             // label3
             // 
@@ -124,145 +225,47 @@
             this.NameTransportTextBox.TabIndex = 1;
             this.NameTransportTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuDropdown1
-            // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(37, 36);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(444, 46);
-            this.bunifuDropdown1.TabIndex = 22;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 177);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(406, 31);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Відстань від початкової станції";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // bunifuMetroTextbox1
-            // 
-            this.bunifuMetroTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox1.BorderThickness = 3;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(37, 213);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(444, 46);
-            this.bunifuMetroTextbox1.TabIndex = 23;
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(31, 274);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(365, 31);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Відстань до кінцевої станції";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // bunifuMetroTextbox2
-            // 
-            this.bunifuMetroTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox2.BorderThickness = 3;
-            this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox2.isPassword = false;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(37, 310);
-            this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
-            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(444, 46);
-            this.bunifuMetroTextbox2.TabIndex = 25;
-            this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuDatepicker1
-            // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(37, 396);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(444, 46);
-            this.bunifuDatepicker1.TabIndex = 27;
-            this.bunifuDatepicker1.Value = new System.DateTime(2023, 11, 6, 18, 47, 4, 486);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(31, 362);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(198, 31);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Дата прибуття";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.bunifuDropdown2);
+            this.panel2.Controls.Add(this.DeleteButton);
+            this.panel2.Controls.Add(this.RouteIdDelete);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.bunifuMetroTextbox5);
+            this.panel2.Controls.Add(this.NameStationDelete);
             this.panel2.Location = new System.Drawing.Point(565, 33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(382, 459);
             this.panel2.TabIndex = 29;
             // 
-            // button1
+            // DeleteButton
             // 
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(87, 339);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 45);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Видалити";
-            this.button1.UseVisualStyleBackColor = true;
+            this.DeleteButton.FlatAppearance.BorderSize = 3;
+            this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteButton.ForeColor = System.Drawing.Color.White;
+            this.DeleteButton.Location = new System.Drawing.Point(87, 339);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(211, 45);
+            this.DeleteButton.TabIndex = 3;
+            this.DeleteButton.Text = "Видалити";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
-            // bunifuDropdown2
+            // RouteIdDelete
             // 
-            this.bunifuDropdown2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown2.BorderRadius = 3;
-            this.bunifuDropdown2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown2.Items = new string[0];
-            this.bunifuDropdown2.Location = new System.Drawing.Point(33, 146);
-            this.bunifuDropdown2.Name = "bunifuDropdown2";
-            this.bunifuDropdown2.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.bunifuDropdown2.selectedIndex = -1;
-            this.bunifuDropdown2.Size = new System.Drawing.Size(329, 46);
-            this.bunifuDropdown2.TabIndex = 22;
+            this.RouteIdDelete.BackColor = System.Drawing.Color.Transparent;
+            this.RouteIdDelete.BorderRadius = 3;
+            this.RouteIdDelete.DisabledColor = System.Drawing.Color.Gray;
+            this.RouteIdDelete.ForeColor = System.Drawing.Color.White;
+            this.RouteIdDelete.Items = new string[0];
+            this.RouteIdDelete.Location = new System.Drawing.Point(33, 146);
+            this.RouteIdDelete.Name = "RouteIdDelete";
+            this.RouteIdDelete.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.RouteIdDelete.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.RouteIdDelete.selectedIndex = -1;
+            this.RouteIdDelete.Size = new System.Drawing.Size(329, 46);
+            this.RouteIdDelete.TabIndex = 22;
             // 
             // label9
             // 
@@ -287,23 +290,23 @@
             this.label10.TabIndex = 1;
             this.label10.Text = "Номер маршруту";
             // 
-            // bunifuMetroTextbox5
+            // NameStationDelete
             // 
-            this.bunifuMetroTextbox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuMetroTextbox5.BorderColorFocused = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox5.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox5.BorderColorMouseHover = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox5.BorderThickness = 3;
-            this.bunifuMetroTextbox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bunifuMetroTextbox5.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox5.isPassword = false;
-            this.bunifuMetroTextbox5.Location = new System.Drawing.Point(33, 249);
-            this.bunifuMetroTextbox5.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuMetroTextbox5.Name = "bunifuMetroTextbox5";
-            this.bunifuMetroTextbox5.Size = new System.Drawing.Size(329, 46);
-            this.bunifuMetroTextbox5.TabIndex = 1;
-            this.bunifuMetroTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.NameStationDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.NameStationDelete.BorderColorFocused = System.Drawing.Color.Gray;
+            this.NameStationDelete.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.NameStationDelete.BorderColorMouseHover = System.Drawing.Color.Gray;
+            this.NameStationDelete.BorderThickness = 3;
+            this.NameStationDelete.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NameStationDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameStationDelete.ForeColor = System.Drawing.Color.White;
+            this.NameStationDelete.isPassword = false;
+            this.NameStationDelete.Location = new System.Drawing.Point(33, 249);
+            this.NameStationDelete.Margin = new System.Windows.Forms.Padding(5);
+            this.NameStationDelete.Name = "NameStationDelete";
+            this.NameStationDelete.Size = new System.Drawing.Size(329, 46);
+            this.NameStationDelete.TabIndex = 1;
+            this.NameStationDelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // ExitButton
             // 
@@ -346,19 +349,19 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuMetroTextbox NameTransportTextBox;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuDropdown Routeid;
         private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
+        private Bunifu.Framework.UI.BunifuMetroTextbox DistanceToEnd;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox DistanceFromStart;
+        private Bunifu.Framework.UI.BunifuDatepicker ArrivalTime;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
+        private System.Windows.Forms.Button DeleteButton;
+        private Bunifu.Framework.UI.BunifuDropdown RouteIdDelete;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox5;
+        private Bunifu.Framework.UI.BunifuMetroTextbox NameStationDelete;
         private System.Windows.Forms.Button ExitButton;
     }
 }
