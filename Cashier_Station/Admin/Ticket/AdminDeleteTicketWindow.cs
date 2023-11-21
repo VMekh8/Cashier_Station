@@ -62,7 +62,39 @@ namespace Cashier_Station
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
+            var result = MessageBox.Show("Ви впевненні, що хочете видалення цю інформацію?", "Видалення інформації",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
 
+
+                try
+                {
+                    db.OpenConnection();
+                    string query = "DELETE FROM ticket WHERE id = @id";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                    {
+                        cmd.Parameters.AddWithValue("@id", int.Parse(IdTicket.selectedValue));
+
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    Console.WriteLine("Видалення відбулося успішно");
+                    MessageBox.Show("Видалення відбулося успішно", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("При видаленні даних з таблиці ticket виникла помилка");
+                    Console.WriteLine($"Помилка: {ex.Message}");
+                    MessageBox.Show("При видаленні даних з таблиці ticket виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    db.CloseConnection();
+                }
+            }
         }
     }
 }
