@@ -98,11 +98,12 @@ namespace Cashier_Station.Admin
                 try
                 {
                     db.OpenConnection();
-                    string query = "UPDATE transport SET Name = @Name";
+                    string query = "UPDATE transport SET Name = @Name WHERE id = @Id";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
                     {
                         cmd.Parameters.AddWithValue("@Name", NameTransportTextBox.Text);
+                        cmd.Parameters.AddWithValue("@id", int.Parse(TransportIdDropDown.selectedValue));
 
                         cmd.ExecuteNonQuery();
                     }

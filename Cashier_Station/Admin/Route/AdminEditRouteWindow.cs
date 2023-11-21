@@ -138,7 +138,7 @@ namespace Cashier_Station
                 try
                 {
                     db.OpenConnection();
-                    string query = "UPDATE route SET StartPoint = @StartPoint, EndPoint = @EndPoint, DateofStart = @DateofStart, DateofEnd = @DateofEnd, SeatsNumber = @SeatsNumber";
+                    string query = "UPDATE route SET StartPoint = @StartPoint, EndPoint = @EndPoint, DateofStart = @DateofStart, DateofEnd = @DateofEnd, SeatsNumber = @SeatsNumber WHERE id = @id";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
                     {
@@ -147,6 +147,9 @@ namespace Cashier_Station
                         cmd.Parameters.AddWithValue("@DateofStart", DateTime.Parse(DateStart.Value.ToString()));
                         cmd.Parameters.AddWithValue("@DateofEnd", DateTime.Parse(DateArrival.Value.ToString()));
                         cmd.Parameters.AddWithValue("@SeatsNumber", int.Parse(SeatsNumber.Text));
+
+
+                        cmd.Parameters.AddWithValue("@id", int.Parse(IdRouteDropDown.selectedValue));
 
                         cmd.ExecuteNonQuery();
                         
