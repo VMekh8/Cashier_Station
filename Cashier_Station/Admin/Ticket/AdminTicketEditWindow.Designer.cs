@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TicketGridView = new System.Windows.Forms.DataGridView();
-            this.IdTicletDropDown = new Bunifu.Framework.UI.BunifuDropdown();
+            this.IdTicketDropDown = new Bunifu.Framework.UI.BunifuDropdown();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.RouteNumberTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -42,27 +43,37 @@
             // 
             // TicketGridView
             // 
+            this.TicketGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TicketGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TicketGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.TicketGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TicketGridView.Location = new System.Drawing.Point(44, 12);
             this.TicketGridView.Name = "TicketGridView";
+            this.TicketGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.TicketGridView.Size = new System.Drawing.Size(909, 294);
             this.TicketGridView.TabIndex = 2;
             // 
-            // IdTicletDropDown
+            // IdTicketDropDown
             // 
-            this.IdTicletDropDown.BackColor = System.Drawing.Color.Transparent;
-            this.IdTicletDropDown.BorderRadius = 3;
-            this.IdTicletDropDown.DisabledColor = System.Drawing.Color.Gray;
-            this.IdTicletDropDown.ForeColor = System.Drawing.Color.White;
-            this.IdTicletDropDown.Items = new string[0];
-            this.IdTicletDropDown.Location = new System.Drawing.Point(44, 358);
-            this.IdTicletDropDown.Name = "IdTicletDropDown";
-            this.IdTicletDropDown.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.IdTicletDropDown.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.IdTicletDropDown.selectedIndex = -1;
-            this.IdTicletDropDown.Size = new System.Drawing.Size(300, 46);
-            this.IdTicletDropDown.TabIndex = 8;
+            this.IdTicketDropDown.BackColor = System.Drawing.Color.Transparent;
+            this.IdTicketDropDown.BorderRadius = 3;
+            this.IdTicketDropDown.DisabledColor = System.Drawing.Color.Gray;
+            this.IdTicketDropDown.ForeColor = System.Drawing.Color.White;
+            this.IdTicketDropDown.Items = new string[0];
+            this.IdTicketDropDown.Location = new System.Drawing.Point(44, 358);
+            this.IdTicketDropDown.Name = "IdTicketDropDown";
+            this.IdTicketDropDown.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.IdTicketDropDown.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.IdTicketDropDown.selectedIndex = -1;
+            this.IdTicketDropDown.Size = new System.Drawing.Size(300, 46);
+            this.IdTicketDropDown.TabIndex = 8;
             // 
             // label4
             // 
@@ -116,6 +127,7 @@
             this.SubmitButton.TabIndex = 13;
             this.SubmitButton.Text = "Редагувати";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // label3
             // 
@@ -172,7 +184,7 @@
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TicketPriceTextBox);
-            this.Controls.Add(this.IdTicletDropDown);
+            this.Controls.Add(this.IdTicketDropDown);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TicketGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -187,7 +199,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView TicketGridView;
-        private Bunifu.Framework.UI.BunifuDropdown IdTicletDropDown;
+        private Bunifu.Framework.UI.BunifuDropdown IdTicketDropDown;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuMetroTextbox RouteNumberTextBox;
