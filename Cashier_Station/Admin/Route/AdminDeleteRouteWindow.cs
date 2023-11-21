@@ -86,7 +86,7 @@ namespace Cashier_Station
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("При видаленні даних з таблицю route виникла помилка");
+                        Console.WriteLine("При видаленні даних з таблиці route виникла помилка");
                         Console.WriteLine($"Помилка: {ex.Message}");
                         MessageBox.Show("При видаленні даних з таблиці route виникла помилка\n Спочатку видаліть квитки, які стосуються цього маршруту", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }

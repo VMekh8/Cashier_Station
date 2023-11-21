@@ -30,9 +30,9 @@
         {
             this.ExitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.SubmitButton = new System.Windows.Forms.Button();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.IdtransportDelete = new Bunifu.Framework.UI.BunifuDropdown();
             this.label2 = new System.Windows.Forms.Label();
+            this.SubmitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,13 +53,39 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.panel1.Controls.Add(this.bunifuDropdown1);
+            this.panel1.Controls.Add(this.IdtransportDelete);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.SubmitButton);
             this.panel1.Location = new System.Drawing.Point(207, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(570, 380);
             this.panel1.TabIndex = 24;
+            // 
+            // IdtransportDelete
+            // 
+            this.IdtransportDelete.BackColor = System.Drawing.Color.Transparent;
+            this.IdtransportDelete.BorderRadius = 3;
+            this.IdtransportDelete.DisabledColor = System.Drawing.Color.Gray;
+            this.IdtransportDelete.ForeColor = System.Drawing.Color.White;
+            this.IdtransportDelete.Items = new string[0];
+            this.IdtransportDelete.Location = new System.Drawing.Point(48, 151);
+            this.IdtransportDelete.Name = "IdtransportDelete";
+            this.IdtransportDelete.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.IdtransportDelete.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.IdtransportDelete.selectedIndex = -1;
+            this.IdtransportDelete.Size = new System.Drawing.Size(496, 46);
+            this.IdtransportDelete.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(173, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(251, 31);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Номер транспорту";
             // 
             // SubmitButton
             // 
@@ -73,32 +99,7 @@
             this.SubmitButton.TabIndex = 3;
             this.SubmitButton.Text = "Відправити";
             this.SubmitButton.UseVisualStyleBackColor = true;
-            // 
-            // bunifuDropdown1
-            // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(48, 151);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(496, 46);
-            this.bunifuDropdown1.TabIndex = 23;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(173, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(251, 31);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Номер транспорту";
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // DeleteTransportWindow
             // 
@@ -122,7 +123,7 @@
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button SubmitButton;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuDropdown IdtransportDelete;
         private System.Windows.Forms.Label label2;
     }
 }

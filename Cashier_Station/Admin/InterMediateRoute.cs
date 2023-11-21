@@ -135,9 +135,9 @@ namespace Cashier_Station.Admin
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("При видаленні даних з таблицю intermediateroute виникла помилка");
+                    Console.WriteLine("При видаленні даних з таблиці intermediateroute виникла помилка");
                     Console.WriteLine($"Помилка: {ex.Message}");
-                    MessageBox.Show("При видаленні даних з таблицю intermediateroute виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("При видаленні даних з таблиці intermediateroute виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
