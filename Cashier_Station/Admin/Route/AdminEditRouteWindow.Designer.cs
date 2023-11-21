@@ -28,32 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.RouteGridView = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.EndPoint = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.SurnameTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.StartPoint = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.DateArrival = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.DateStart = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.SeatsNumber = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.IdRouteDropDown = new Bunifu.Framework.UI.BunifuDropdown();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RouteGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // RouteGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(909, 294);
-            this.dataGridView1.TabIndex = 1;
+            this.RouteGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.RouteGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RouteGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.RouteGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RouteGridView.Location = new System.Drawing.Point(42, 12);
+            this.RouteGridView.Name = "RouteGridView";
+            this.RouteGridView.Size = new System.Drawing.Size(909, 294);
+            this.RouteGridView.TabIndex = 1;
             // 
             // label4
             // 
@@ -66,23 +76,23 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Точка прибуття";
             // 
-            // bunifuMetroTextbox1
+            // EndPoint
             // 
-            this.bunifuMetroTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox1.BorderThickness = 3;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(301, 352);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(255, 46);
-            this.bunifuMetroTextbox1.TabIndex = 10;
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.EndPoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.EndPoint.BorderColorFocused = System.Drawing.Color.Gray;
+            this.EndPoint.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EndPoint.BorderColorMouseHover = System.Drawing.Color.Gray;
+            this.EndPoint.BorderThickness = 3;
+            this.EndPoint.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.EndPoint.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EndPoint.ForeColor = System.Drawing.Color.White;
+            this.EndPoint.isPassword = false;
+            this.EndPoint.Location = new System.Drawing.Point(301, 352);
+            this.EndPoint.Margin = new System.Windows.Forms.Padding(5);
+            this.EndPoint.Name = "EndPoint";
+            this.EndPoint.Size = new System.Drawing.Size(255, 46);
+            this.EndPoint.TabIndex = 10;
+            this.EndPoint.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label3
             // 
@@ -106,49 +116,49 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Номер маршруту";
             // 
-            // SurnameTextBox
+            // StartPoint
             // 
-            this.SurnameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.SurnameTextBox.BorderColorFocused = System.Drawing.Color.Gray;
-            this.SurnameTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SurnameTextBox.BorderColorMouseHover = System.Drawing.Color.Gray;
-            this.SurnameTextBox.BorderThickness = 3;
-            this.SurnameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.SurnameTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SurnameTextBox.ForeColor = System.Drawing.Color.White;
-            this.SurnameTextBox.isPassword = false;
-            this.SurnameTextBox.Location = new System.Drawing.Point(23, 442);
-            this.SurnameTextBox.Margin = new System.Windows.Forms.Padding(5);
-            this.SurnameTextBox.Name = "SurnameTextBox";
-            this.SurnameTextBox.Size = new System.Drawing.Size(255, 46);
-            this.SurnameTextBox.TabIndex = 8;
-            this.SurnameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.StartPoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.StartPoint.BorderColorFocused = System.Drawing.Color.Gray;
+            this.StartPoint.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.StartPoint.BorderColorMouseHover = System.Drawing.Color.Gray;
+            this.StartPoint.BorderThickness = 3;
+            this.StartPoint.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.StartPoint.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StartPoint.ForeColor = System.Drawing.Color.White;
+            this.StartPoint.isPassword = false;
+            this.StartPoint.Location = new System.Drawing.Point(23, 442);
+            this.StartPoint.Margin = new System.Windows.Forms.Padding(5);
+            this.StartPoint.Name = "StartPoint";
+            this.StartPoint.Size = new System.Drawing.Size(255, 46);
+            this.StartPoint.TabIndex = 8;
+            this.StartPoint.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuDatepicker2
+            // DateArrival
             // 
-            this.bunifuDatepicker2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuDatepicker2.BorderRadius = 0;
-            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker2.FormatCustom = null;
-            this.bunifuDatepicker2.Location = new System.Drawing.Point(583, 352);
-            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
-            this.bunifuDatepicker2.Size = new System.Drawing.Size(255, 46);
-            this.bunifuDatepicker2.TabIndex = 19;
-            this.bunifuDatepicker2.Value = new System.DateTime(2023, 11, 6, 18, 47, 4, 486);
+            this.DateArrival.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.DateArrival.BorderRadius = 0;
+            this.DateArrival.ForeColor = System.Drawing.Color.White;
+            this.DateArrival.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DateArrival.FormatCustom = null;
+            this.DateArrival.Location = new System.Drawing.Point(583, 352);
+            this.DateArrival.Name = "DateArrival";
+            this.DateArrival.Size = new System.Drawing.Size(255, 46);
+            this.DateArrival.TabIndex = 19;
+            this.DateArrival.Value = new System.DateTime(2023, 11, 6, 18, 47, 4, 486);
             // 
-            // bunifuDatepicker1
+            // DateStart
             // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(305, 442);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(255, 46);
-            this.bunifuDatepicker1.TabIndex = 18;
-            this.bunifuDatepicker1.Value = new System.DateTime(2023, 11, 6, 18, 47, 4, 486);
+            this.DateStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.DateStart.BorderRadius = 0;
+            this.DateStart.ForeColor = System.Drawing.Color.White;
+            this.DateStart.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DateStart.FormatCustom = null;
+            this.DateStart.Location = new System.Drawing.Point(305, 442);
+            this.DateStart.Name = "DateStart";
+            this.DateStart.Size = new System.Drawing.Size(255, 46);
+            this.DateStart.TabIndex = 18;
+            this.DateStart.Value = new System.DateTime(2023, 11, 6, 18, 47, 4, 486);
             // 
             // label1
             // 
@@ -161,23 +171,23 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Кількість місць";
             // 
-            // bunifuMetroTextbox2
+            // SeatsNumber
             // 
-            this.bunifuMetroTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox2.BorderThickness = 3;
-            this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox2.isPassword = false;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(587, 442);
-            this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
-            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(255, 46);
-            this.bunifuMetroTextbox2.TabIndex = 16;
-            this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.SeatsNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.SeatsNumber.BorderColorFocused = System.Drawing.Color.Gray;
+            this.SeatsNumber.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SeatsNumber.BorderColorMouseHover = System.Drawing.Color.Gray;
+            this.SeatsNumber.BorderThickness = 3;
+            this.SeatsNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SeatsNumber.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SeatsNumber.ForeColor = System.Drawing.Color.White;
+            this.SeatsNumber.isPassword = false;
+            this.SeatsNumber.Location = new System.Drawing.Point(587, 442);
+            this.SeatsNumber.Margin = new System.Windows.Forms.Padding(5);
+            this.SeatsNumber.Name = "SeatsNumber";
+            this.SeatsNumber.Size = new System.Drawing.Size(255, 46);
+            this.SeatsNumber.TabIndex = 16;
+            this.SeatsNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label5
             // 
@@ -201,20 +211,21 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Дата відправлення";
             // 
-            // bunifuDropdown1
+            // IdRouteDropDown
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(23, 352);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(255, 46);
-            this.bunifuDropdown1.TabIndex = 20;
+            this.IdRouteDropDown.BackColor = System.Drawing.Color.Transparent;
+            this.IdRouteDropDown.BorderRadius = 3;
+            this.IdRouteDropDown.DisabledColor = System.Drawing.Color.Gray;
+            this.IdRouteDropDown.ForeColor = System.Drawing.Color.White;
+            this.IdRouteDropDown.Items = new string[0];
+            this.IdRouteDropDown.Location = new System.Drawing.Point(23, 352);
+            this.IdRouteDropDown.Name = "IdRouteDropDown";
+            this.IdRouteDropDown.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.IdRouteDropDown.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.IdRouteDropDown.selectedIndex = -1;
+            this.IdRouteDropDown.Size = new System.Drawing.Size(255, 46);
+            this.IdRouteDropDown.TabIndex = 20;
+            this.IdRouteDropDown.onItemSelected += new System.EventHandler(this.IdRouteDropDown_onItemSelected);
             // 
             // SubmitButton
             // 
@@ -228,6 +239,7 @@
             this.SubmitButton.TabIndex = 21;
             this.SubmitButton.Text = "Редагувати";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // ExitButton
             // 
@@ -251,23 +263,23 @@
             this.ClientSize = new System.Drawing.Size(1000, 519);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.SubmitButton);
-            this.Controls.Add(this.bunifuDropdown1);
-            this.Controls.Add(this.bunifuDatepicker2);
-            this.Controls.Add(this.bunifuDatepicker1);
+            this.Controls.Add(this.IdRouteDropDown);
+            this.Controls.Add(this.DateArrival);
+            this.Controls.Add(this.DateStart);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bunifuMetroTextbox2);
+            this.Controls.Add(this.SeatsNumber);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.bunifuMetroTextbox1);
+            this.Controls.Add(this.EndPoint);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.SurnameTextBox);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.StartPoint);
+            this.Controls.Add(this.RouteGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminEditRouteWindow";
             this.Text = "AdminEditRouteWindow";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RouteGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,19 +287,19 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView RouteGridView;
         private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox EndPoint;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuMetroTextbox SurnameTextBox;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker2;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox StartPoint;
+        private Bunifu.Framework.UI.BunifuDatepicker DateArrival;
+        private Bunifu.Framework.UI.BunifuDatepicker DateStart;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
+        private Bunifu.Framework.UI.BunifuMetroTextbox SeatsNumber;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuDropdown IdRouteDropDown;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Button ExitButton;
     }
