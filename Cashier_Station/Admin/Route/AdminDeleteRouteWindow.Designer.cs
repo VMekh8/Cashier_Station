@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.RouteIdDropDown = new Bunifu.Framework.UI.BunifuDropdown();
             this.label4 = new System.Windows.Forms.Label();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.panel1.Controls.Add(this.bunifuDropdown1);
+            this.panel1.Controls.Add(this.RouteIdDropDown);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.SubmitButton);
             this.panel1.Location = new System.Drawing.Point(231, 100);
@@ -48,20 +48,20 @@
             this.panel1.Size = new System.Drawing.Size(570, 380);
             this.panel1.TabIndex = 6;
             // 
-            // bunifuDropdown1
+            // RouteIdDropDown
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(37, 107);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(500, 46);
-            this.bunifuDropdown1.TabIndex = 6;
+            this.RouteIdDropDown.BackColor = System.Drawing.Color.Transparent;
+            this.RouteIdDropDown.BorderRadius = 3;
+            this.RouteIdDropDown.DisabledColor = System.Drawing.Color.Gray;
+            this.RouteIdDropDown.ForeColor = System.Drawing.Color.White;
+            this.RouteIdDropDown.Items = new string[0];
+            this.RouteIdDropDown.Location = new System.Drawing.Point(37, 107);
+            this.RouteIdDropDown.Name = "RouteIdDropDown";
+            this.RouteIdDropDown.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.RouteIdDropDown.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.RouteIdDropDown.selectedIndex = -1;
+            this.RouteIdDropDown.Size = new System.Drawing.Size(500, 46);
+            this.RouteIdDropDown.TabIndex = 6;
             // 
             // label4
             // 
@@ -86,6 +86,7 @@
             this.SubmitButton.TabIndex = 3;
             this.SubmitButton.Text = "Видалити";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // label1
             // 
@@ -134,7 +135,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuDropdown RouteIdDropDown;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label label1;
