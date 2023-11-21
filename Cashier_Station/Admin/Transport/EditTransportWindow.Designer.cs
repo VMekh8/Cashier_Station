@@ -28,19 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TransportGridView = new System.Windows.Forms.DataGridView();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.NameTransportTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.TransportIdDropDown = new Bunifu.Framework.UI.BunifuDropdown();
             this.ExitButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TransportGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // TransportGridView
             // 
+            this.TransportGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TransportGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TransportGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.TransportGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TransportGridView.Location = new System.Drawing.Point(39, 35);
             this.TransportGridView.Name = "TransportGridView";
@@ -59,6 +69,7 @@
             this.SubmitButton.TabIndex = 8;
             this.SubmitButton.Text = "Відправити";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // label3
             // 
@@ -100,20 +111,21 @@
             this.NameTransportTextBox.TabIndex = 6;
             this.NameTransportTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuDropdown1
+            // TransportIdDropDown
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(40, 378);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(255, 46);
-            this.bunifuDropdown1.TabIndex = 21;
+            this.TransportIdDropDown.BackColor = System.Drawing.Color.Transparent;
+            this.TransportIdDropDown.BorderRadius = 3;
+            this.TransportIdDropDown.DisabledColor = System.Drawing.Color.Gray;
+            this.TransportIdDropDown.ForeColor = System.Drawing.Color.White;
+            this.TransportIdDropDown.Items = new string[0];
+            this.TransportIdDropDown.Location = new System.Drawing.Point(40, 378);
+            this.TransportIdDropDown.Name = "TransportIdDropDown";
+            this.TransportIdDropDown.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.TransportIdDropDown.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.TransportIdDropDown.selectedIndex = -1;
+            this.TransportIdDropDown.Size = new System.Drawing.Size(255, 46);
+            this.TransportIdDropDown.TabIndex = 21;
+            this.TransportIdDropDown.onItemSelected += new System.EventHandler(this.TransportIdDropDown_onItemSelected);
             // 
             // ExitButton
             // 
@@ -136,7 +148,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(984, 480);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.bunifuDropdown1);
+            this.Controls.Add(this.TransportIdDropDown);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -158,7 +170,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuMetroTextbox NameTransportTextBox;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuDropdown TransportIdDropDown;
         private System.Windows.Forms.Button ExitButton;
     }
 }
