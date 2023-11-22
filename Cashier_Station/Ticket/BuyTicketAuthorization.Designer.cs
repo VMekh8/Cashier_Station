@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.NumberRouteTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,14 +37,15 @@
             this.UsrnameTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.IdTicket = new Bunifu.Framework.UI.BunifuDropdown();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.panel1.Controls.Add(this.IdTicket);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.NumberRouteTextBox);
             this.panel1.Controls.Add(this.SubmitButton);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -63,27 +63,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(29, 210);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(332, 31);
+            this.label4.Size = new System.Drawing.Size(219, 31);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Введіть номер маршруту";
-            // 
-            // NumberRouteTextBox
-            // 
-            this.NumberRouteTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.NumberRouteTextBox.BorderColorFocused = System.Drawing.Color.Gray;
-            this.NumberRouteTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.NumberRouteTextBox.BorderColorMouseHover = System.Drawing.Color.Gray;
-            this.NumberRouteTextBox.BorderThickness = 3;
-            this.NumberRouteTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.NumberRouteTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NumberRouteTextBox.ForeColor = System.Drawing.Color.White;
-            this.NumberRouteTextBox.isPassword = false;
-            this.NumberRouteTextBox.Location = new System.Drawing.Point(35, 241);
-            this.NumberRouteTextBox.Margin = new System.Windows.Forms.Padding(5);
-            this.NumberRouteTextBox.Name = "NumberRouteTextBox";
-            this.NumberRouteTextBox.Size = new System.Drawing.Size(500, 46);
-            this.NumberRouteTextBox.TabIndex = 4;
-            this.NumberRouteTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.label4.Text = "Виберіть квиток";
             // 
             // SubmitButton
             // 
@@ -97,6 +79,7 @@
             this.SubmitButton.TabIndex = 3;
             this.SubmitButton.Text = "Відправити";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // label3
             // 
@@ -181,6 +164,21 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // IdTicket
+            // 
+            this.IdTicket.BackColor = System.Drawing.Color.Transparent;
+            this.IdTicket.BorderRadius = 3;
+            this.IdTicket.DisabledColor = System.Drawing.Color.Gray;
+            this.IdTicket.ForeColor = System.Drawing.Color.White;
+            this.IdTicket.Items = new string[0];
+            this.IdTicket.Location = new System.Drawing.Point(35, 244);
+            this.IdTicket.Name = "IdTicket";
+            this.IdTicket.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.IdTicket.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.IdTicket.selectedIndex = -1;
+            this.IdTicket.Size = new System.Drawing.Size(500, 46);
+            this.IdTicket.TabIndex = 7;
+            // 
             // BuyTicketAuthorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,7 +208,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuMetroTextbox NumberRouteTextBox;
         private System.Windows.Forms.Button ExitButton;
+        private Bunifu.Framework.UI.BunifuDropdown IdTicket;
     }
 }

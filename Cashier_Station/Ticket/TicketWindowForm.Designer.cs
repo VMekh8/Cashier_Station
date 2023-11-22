@@ -30,8 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.TicketGridView = new System.Windows.Forms.DataGridView();
-            this.UsrnameTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.TicketDatePicker = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.RouteIdForTicket = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.FindSeatButton = new System.Windows.Forms.Button();
             this.BuyTicketButton = new System.Windows.Forms.Button();
             this.ReturnTicketButton = new System.Windows.Forms.Button();
@@ -51,6 +50,7 @@
             // 
             // TicketGridView
             // 
+            this.TicketGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TicketGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.TicketGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TicketGridView.Location = new System.Drawing.Point(41, 51);
@@ -58,36 +58,23 @@
             this.TicketGridView.Size = new System.Drawing.Size(909, 294);
             this.TicketGridView.TabIndex = 3;
             // 
-            // UsrnameTextBox
+            // RouteIdForTicket
             // 
-            this.UsrnameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.UsrnameTextBox.BorderColorFocused = System.Drawing.Color.Gray;
-            this.UsrnameTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.UsrnameTextBox.BorderColorMouseHover = System.Drawing.Color.Gray;
-            this.UsrnameTextBox.BorderThickness = 3;
-            this.UsrnameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.UsrnameTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UsrnameTextBox.ForeColor = System.Drawing.Color.White;
-            this.UsrnameTextBox.isPassword = false;
-            this.UsrnameTextBox.Location = new System.Drawing.Point(413, 361);
-            this.UsrnameTextBox.Margin = new System.Windows.Forms.Padding(5);
-            this.UsrnameTextBox.Name = "UsrnameTextBox";
-            this.UsrnameTextBox.Size = new System.Drawing.Size(314, 46);
-            this.UsrnameTextBox.TabIndex = 4;
-            this.UsrnameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // TicketDatePicker
-            // 
-            this.TicketDatePicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.TicketDatePicker.BorderRadius = 0;
-            this.TicketDatePicker.ForeColor = System.Drawing.Color.White;
-            this.TicketDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.TicketDatePicker.FormatCustom = null;
-            this.TicketDatePicker.Location = new System.Drawing.Point(413, 415);
-            this.TicketDatePicker.Name = "TicketDatePicker";
-            this.TicketDatePicker.Size = new System.Drawing.Size(314, 36);
-            this.TicketDatePicker.TabIndex = 5;
-            this.TicketDatePicker.Value = new System.DateTime(2023, 11, 6, 18, 47, 4, 486);
+            this.RouteIdForTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.RouteIdForTicket.BorderColorFocused = System.Drawing.Color.Gray;
+            this.RouteIdForTicket.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.RouteIdForTicket.BorderColorMouseHover = System.Drawing.Color.Gray;
+            this.RouteIdForTicket.BorderThickness = 3;
+            this.RouteIdForTicket.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.RouteIdForTicket.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RouteIdForTicket.ForeColor = System.Drawing.Color.White;
+            this.RouteIdForTicket.isPassword = false;
+            this.RouteIdForTicket.Location = new System.Drawing.Point(413, 361);
+            this.RouteIdForTicket.Margin = new System.Windows.Forms.Padding(5);
+            this.RouteIdForTicket.Name = "RouteIdForTicket";
+            this.RouteIdForTicket.Size = new System.Drawing.Size(314, 46);
+            this.RouteIdForTicket.TabIndex = 4;
+            this.RouteIdForTicket.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // FindSeatButton
             // 
@@ -97,10 +84,11 @@
             this.FindSeatButton.ForeColor = System.Drawing.Color.White;
             this.FindSeatButton.Location = new System.Drawing.Point(735, 361);
             this.FindSeatButton.Name = "FindSeatButton";
-            this.FindSeatButton.Size = new System.Drawing.Size(215, 90);
+            this.FindSeatButton.Size = new System.Drawing.Size(215, 46);
             this.FindSeatButton.TabIndex = 7;
             this.FindSeatButton.Text = "Знайти місця";
             this.FindSeatButton.UseVisualStyleBackColor = true;
+            this.FindSeatButton.Click += new System.EventHandler(this.FindSeatButton_Click);
             // 
             // BuyTicketButton
             // 
@@ -139,8 +127,7 @@
             this.Controls.Add(this.ReturnTicketButton);
             this.Controls.Add(this.BuyTicketButton);
             this.Controls.Add(this.FindSeatButton);
-            this.Controls.Add(this.TicketDatePicker);
-            this.Controls.Add(this.UsrnameTextBox);
+            this.Controls.Add(this.RouteIdForTicket);
             this.Controls.Add(this.TicketGridView);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -156,8 +143,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView TicketGridView;
-        private Bunifu.Framework.UI.BunifuMetroTextbox UsrnameTextBox;
-        private Bunifu.Framework.UI.BunifuDatepicker TicketDatePicker;
+        private Bunifu.Framework.UI.BunifuMetroTextbox RouteIdForTicket;
         private System.Windows.Forms.Button FindSeatButton;
         private System.Windows.Forms.Button BuyTicketButton;
         private System.Windows.Forms.Button ReturnTicketButton;

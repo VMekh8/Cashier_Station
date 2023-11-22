@@ -78,6 +78,7 @@ namespace Cashier_Station
             catch (Exception ex)
             {
                 Console.WriteLine("При завантаженні даних виникла помилка");
+                Console.WriteLine(ex.Message);
                 MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
