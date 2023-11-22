@@ -70,12 +70,17 @@ namespace Cashier_Station.Models
             var result = MessageBox.Show("Ви впевнені, що хочете придбати цей квиток?", "Покупка", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                if (UsrnameTextBox.Text == "" || SurnameTextBox.Text == "")
+                {
+                    MessageBox.Show("Поля не можуть бути пустими", "Покупка квитків", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 try
                 {
                     db.OpenConnection();
                     string query = "START TRANSACTION;" +
                         "INSERT INTO client (Name, Surname, TicketId) VALUES (@Name, @Surname, @TicketId);" +
                         "UPDATE route SET SeatsNumber = SeatsNumber - 1 WHERE id = @RouteId;" +
+                        "UPDATE ticket SET isActive = true WHERE id = @TicketId;" +
                         "COMMIT;";
 
 
