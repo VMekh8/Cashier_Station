@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.RouteGridView = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.StartPointTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -36,17 +36,9 @@
             this.EndPointTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.AnalyseButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.RouteGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.RouteGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // RouteGridView
-            // 
-            this.RouteGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.RouteGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RouteGridView.Location = new System.Drawing.Point(41, 51);
-            this.RouteGridView.Name = "RouteGridView";
-            this.RouteGridView.Size = new System.Drawing.Size(909, 294);
-            this.RouteGridView.TabIndex = 4;
             // 
             // label1
             // 
@@ -144,12 +136,31 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // RouteGridView
+            // 
+            this.RouteGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.RouteGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RouteGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.RouteGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RouteGridView.Location = new System.Drawing.Point(41, 51);
+            this.RouteGridView.Name = "RouteGridView";
+            this.RouteGridView.Size = new System.Drawing.Size(909, 294);
+            this.RouteGridView.TabIndex = 12;
+            // 
             // FrequencyWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1000, 519);
+            this.Controls.Add(this.RouteGridView);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.AnalyseButton);
             this.Controls.Add(this.label2);
@@ -157,7 +168,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.StartPointTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.RouteGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrequencyWindowForm";
             this.Text = "FrequencyWindowForm";
@@ -168,8 +178,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView RouteGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuMetroTextbox StartPointTextBox;
@@ -177,5 +185,6 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox EndPointTextBox;
         private System.Windows.Forms.Button AnalyseButton;
         private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.DataGridView RouteGridView;
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.RouteGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,14 +44,14 @@
             // 
             this.RouteGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.RouteGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RouteGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RouteGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.RouteGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RouteGridView.Location = new System.Drawing.Point(43, 197);
             this.RouteGridView.Name = "RouteGridView";
@@ -92,25 +92,23 @@
             // 
             // LongestRouteName
             // 
-            this.LongestRouteName.AutoSize = true;
             this.LongestRouteName.Font = new System.Drawing.Font("Microsoft YaHei", 16.75F, System.Drawing.FontStyle.Bold);
             this.LongestRouteName.ForeColor = System.Drawing.Color.White;
             this.LongestRouteName.Location = new System.Drawing.Point(3, 0);
             this.LongestRouteName.Name = "LongestRouteName";
-            this.LongestRouteName.Size = new System.Drawing.Size(270, 31);
+            this.LongestRouteName.Size = new System.Drawing.Size(270, 41);
             this.LongestRouteName.TabIndex = 4;
-            this.LongestRouteName.Text = "Найдовший маршрут";
+            this.LongestRouteName.Text = "1";
             // 
             // LongestRouteRange
             // 
-            this.LongestRouteRange.AutoSize = true;
             this.LongestRouteRange.Font = new System.Drawing.Font("Microsoft YaHei", 13.75F, System.Drawing.FontStyle.Bold);
             this.LongestRouteRange.ForeColor = System.Drawing.Color.White;
-            this.LongestRouteRange.Location = new System.Drawing.Point(3, 31);
+            this.LongestRouteRange.Location = new System.Drawing.Point(3, 41);
             this.LongestRouteRange.Name = "LongestRouteRange";
-            this.LongestRouteRange.Size = new System.Drawing.Size(230, 26);
+            this.LongestRouteRange.Size = new System.Drawing.Size(230, 34);
             this.LongestRouteRange.TabIndex = 5;
-            this.LongestRouteRange.Text = "Найдовший маршрут";
+            this.LongestRouteRange.Text = "3";
             // 
             // AnalyseRouteButton
             // 
@@ -142,7 +140,6 @@
             this.Text = "RouteWindow";
             ((System.ComponentModel.ISupportInitialize)(this.RouteGridView)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

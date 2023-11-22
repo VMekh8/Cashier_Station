@@ -18,6 +18,58 @@ namespace Cashier_Station
         {
             InitializeComponent();
             FillDataGrid();
+            GetLongestRoute();
+        }
+
+        private void GetLongestRoute()
+        {
+
+            try
+            {
+                db.OpenConnection();
+                string query = @"
+                SELECT 
+                    MAX(intermediateroute.DistanceFromStart + intermediateroute.DistanceToEnd) AS MaxDistance, 
+                        route.StartPoint, 
+                        route.EndPoint 
+                    FROM 
+                        intermediateroute 
+                    INNER JOIN 
+                        route ON intermediateroute.RouteId = route.id 
+                    GROUP BY 
+                        route.StartPoint, 
+                        route.EndPoint";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                {
+                    decimal maxDistance;
+                    string endPoint, startPoint;
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            maxDistance = reader.GetDecimal("MaxDistance");
+                            startPoint = reader.GetString("StartPoint");
+                            endPoint = reader.GetString("EndPoint");
+
+
+                            LongestRouteName.Text = $"{startPoint} - {endPoint}"; 
+                            LongestRouteRange.Text = $"{maxDistance} км."; 
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("При завантаженні даних виникла помилка");
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db.CloseConnection();
+            }
         }
 
         private void FillDataGrid()
