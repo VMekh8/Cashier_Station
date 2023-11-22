@@ -34,7 +34,7 @@ namespace Cashier_Station.Models
             try
             {
                 db.OpenConnection();
-                string query = "SELECT * FROM ticket";
+                string query = "SELECT * FROM ticket WHERE IsActive = false";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
                 {
@@ -74,38 +74,42 @@ namespace Cashier_Station.Models
                 {
                     MessageBox.Show("Поля не можуть бути пустими", "Покупка квитків", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                try
+                else
                 {
-                    db.OpenConnection();
-                    string query = "START TRANSACTION;" +
-                        "INSERT INTO client (Name, Surname, TicketId) VALUES (@Name, @Surname, @TicketId);" +
-                        "UPDATE route SET SeatsNumber = SeatsNumber - 1 WHERE id = @RouteId;" +
-                        "UPDATE ticket SET isActive = true WHERE id = @TicketId;" +
-                        "COMMIT;";
-
-
-                    using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                    try
                     {
-                        cmd.Parameters.AddWithValue("@Name", UsrnameTextBox.Text);
-                        cmd.Parameters.AddWithValue("@Surname", SurnameTextBox.Text);
-                        cmd.Parameters.AddWithValue("@TicketId", ticketid[IdTicket.selectedIndex]);
-                        cmd.Parameters.AddWithValue("@RouteId", routeid[IdTicket.selectedIndex]);
+                        db.OpenConnection();
+                        string query = "START TRANSACTION;" +
+                            "INSERT INTO client (Name, Surname, TicketId) VALUES (@Name, @Surname, @TicketId);" +
+                            "UPDATE route SET SeatsNumber = SeatsNumber - 1 WHERE id = @RouteId;" +
+                            "UPDATE ticket SET isActive = true, DateBuy = @DateBuy WHERE id = @TicketId;" +
+                            "COMMIT;";
 
-                        cmd.ExecuteNonQuery();
+
+                        using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                        {
+                            cmd.Parameters.AddWithValue("@Name", UsrnameTextBox.Text);
+                            cmd.Parameters.AddWithValue("@Surname", SurnameTextBox.Text);
+                            cmd.Parameters.AddWithValue("@TicketId", ticketid[IdTicket.selectedIndex]);
+                            cmd.Parameters.AddWithValue("@RouteId", routeid[IdTicket.selectedIndex]);
+                            cmd.Parameters.AddWithValue("@DateBuy", DateTime.Now);
+
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        Console.WriteLine("Дані успішно відправлені");
+                        MessageBox.Show("Дані успішно відправлені\nДякуємо!", "Покупка квитків", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-
-                    Console.WriteLine("Дані успішно відправлені");
-                    MessageBox.Show("Дані успішно відправлені\nДякуємо!", "Покупка квитків", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("При завантаженні даних виникла помилка");
-                    Console.WriteLine(ex.Message);
-                    MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally 
-                { 
-                    db.CloseConnection();
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("При завантаженні даних виникла помилка");
+                        Console.WriteLine(ex.Message);
+                        MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        db.CloseConnection();
+                    }
                 }
             }
         }

@@ -75,6 +75,7 @@ namespace Cashier_Station
                     string query = "START TRANSACTION;" +
                         "UPDATE route SET SeatsNumber = SeatsNumber + 1 WHERE id = @RouteId;" +
                         "UPDATE ticket SET isActive = false WHERE id = @TicketId;" +
+                        "DELETE FROM client WHERE TicketId = @TicketId;" +
                         "COMMIT;";
 
 

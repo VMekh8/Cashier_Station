@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -35,8 +36,8 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.TicketGridView = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
+            this.TicketGridView = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TicketGridView)).BeginInit();
@@ -71,7 +72,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 31);
             this.label3.TabIndex = 4;
-            this.label3.Text = "11";
+            this.label3.Text = "0";
             // 
             // label2
             // 
@@ -100,9 +101,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 31);
+            this.label4.Size = new System.Drawing.Size(28, 31);
             this.label4.TabIndex = 4;
-            this.label4.Text = "11";
+            this.label4.Text = "0";
             // 
             // label5
             // 
@@ -115,15 +116,6 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Кількість проданих квитків";
             // 
-            // TicketGridView
-            // 
-            this.TicketGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.TicketGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TicketGridView.Location = new System.Drawing.Point(42, 213);
-            this.TicketGridView.Name = "TicketGridView";
-            this.TicketGridView.Size = new System.Drawing.Size(909, 294);
-            this.TicketGridView.TabIndex = 10;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -135,14 +127,33 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Усі квитки";
             // 
+            // TicketGridView
+            // 
+            this.TicketGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TicketGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TicketGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.TicketGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TicketGridView.Location = new System.Drawing.Point(42, 213);
+            this.TicketGridView.Name = "TicketGridView";
+            this.TicketGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.TicketGridView.Size = new System.Drawing.Size(909, 294);
+            this.TicketGridView.TabIndex = 12;
+            // 
             // CashierMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1000, 519);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.TicketGridView);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -170,7 +181,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView TicketGridView;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView TicketGridView;
     }
 }
