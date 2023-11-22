@@ -97,6 +97,7 @@
             this.SubmitButton.TabIndex = 3;
             this.SubmitButton.Text = "Повернути";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // ExitButton
             // 
