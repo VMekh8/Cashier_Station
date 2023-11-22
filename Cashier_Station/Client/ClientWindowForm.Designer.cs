@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ClientInfoButton = new System.Windows.Forms.Button();
             this.FindBySurButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ClientDataGrid = new System.Windows.Forms.DataGridView();
             this.SurNameTextBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // ClientInfoButton
@@ -48,6 +49,7 @@
             this.ClientInfoButton.TabIndex = 7;
             this.ClientInfoButton.Text = "Інформація про клієнтів";
             this.ClientInfoButton.UseVisualStyleBackColor = true;
+            this.ClientInfoButton.Click += new System.EventHandler(this.ClientInfoButton_Click);
             // 
             // FindBySurButton
             // 
@@ -61,15 +63,25 @@
             this.FindBySurButton.TabIndex = 8;
             this.FindBySurButton.Text = "Пошук квитків за прізвищем";
             this.FindBySurButton.UseVisualStyleBackColor = true;
+            this.FindBySurButton.Click += new System.EventHandler(this.FindBySurButton_Click);
             // 
-            // dataGridView1
+            // ClientDataGrid
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(44, 213);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(909, 294);
-            this.dataGridView1.TabIndex = 9;
+            this.ClientDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ClientDataGrid.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ClientDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.ClientDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ClientDataGrid.Location = new System.Drawing.Point(44, 213);
+            this.ClientDataGrid.Name = "ClientDataGrid";
+            this.ClientDataGrid.Size = new System.Drawing.Size(909, 294);
+            this.ClientDataGrid.TabIndex = 9;
             // 
             // SurNameTextBox
             // 
@@ -108,13 +120,13 @@
             this.ClientSize = new System.Drawing.Size(1000, 519);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SurNameTextBox);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ClientDataGrid);
             this.Controls.Add(this.FindBySurButton);
             this.Controls.Add(this.ClientInfoButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClientWindowForm";
             this.Text = "ClientWindowForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,7 +136,7 @@
 
         private System.Windows.Forms.Button ClientInfoButton;
         private System.Windows.Forms.Button FindBySurButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ClientDataGrid;
         private Bunifu.Framework.UI.BunifuMetroTextbox SurNameTextBox;
         private System.Windows.Forms.Label label1;
     }
