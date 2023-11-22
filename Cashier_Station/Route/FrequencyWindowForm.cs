@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -56,6 +57,55 @@ namespace Cashier_Station
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AnalyseButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string queryString = @"
+                    SELECT * 
+                    FROM route
+                    WHERE StartPoint = @StartPoint AND EndPoint = @EndPoint
+                    ORDER BY DateofStart ASC;";
+
+                using (MySqlCommand command = new MySqlCommand(queryString, db.GetConnection()))
+                {
+
+                    command.Parameters.AddWithValue("@StartPoint", StartPointTextBox.Text);
+                    command.Parameters.AddWithValue("@EndPoint", EndPointTextBox.Text);
+
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
+
+                    DataTable table = new DataTable();
+                    dataAdapter.Fill(table);
+
+                    RouteGridView.DataSource = table;
+
+                    if (table.Rows.Count > 0)
+                    {
+                        DataRow firstRow = table.Rows[0];
+                        MessageBox.Show($"Найближчий потяг вирушає цим маршрутом: {firstRow["DateofStart"].ToString()}", "Аналіз маршрутів", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Немає доступних потягів.");
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("При завантаженні даних виникла помилка");
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                db.CloseConnection();
+            }
+
         }
     }
 }
