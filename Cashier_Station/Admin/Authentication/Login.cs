@@ -71,5 +71,10 @@ namespace Cashier_Station.Admin.Authentication
                 }
             }
         }
+
+        private void RegistrationButton_Click(object sender, EventArgs e)
+        {
+            mainWindow.OpenInWindow(new Register(mainWindow));
+        }
     }
 }
