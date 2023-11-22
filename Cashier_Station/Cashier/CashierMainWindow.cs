@@ -18,6 +18,7 @@ namespace Cashier_Station
         {
             InitializeComponent();
             FillDataGrid();
+            CountIcnomes();
         }
 
         private void CountIcnomes()
@@ -36,17 +37,15 @@ namespace Cashier_Station
                         decimal totalprice = reader.GetDecimal("TotalPrice");
                         int ticketcount = reader.GetInt32("TotalTickets");
 
-                        label3.Text = totalprice.ToString();
+                        label3.Text = totalprice.ToString() + " грн.";
                         label4.Text = ticketcount.ToString();
                    }
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine("При завантаженні даних виникла помилка");
-                Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Немає жодного проданого квитка", "Обрахування вартості", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally
             {
