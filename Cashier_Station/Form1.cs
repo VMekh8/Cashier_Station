@@ -1,4 +1,5 @@
-﻿using Cashier_Station.Models;
+﻿using Cashier_Station.Admin.Authentication;
+using Cashier_Station.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -85,7 +86,7 @@ namespace Cashier_Station
 
         private void AdminLabel_Click(object sender, EventArgs e)
         {
-            OpenInWindow(new AdminPanelWindowForm());
+            OpenInWindow(new Login(this));
         }
     }
 }

@@ -120,6 +120,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Authentication\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Authentication\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Authentication\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Authentication\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\InterMediateRoute.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +255,12 @@
     <Compile Include="Ticket\TicketWindowForm.Designer.cs">
       <DependentUpon>TicketWindowForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin\Authentication\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Authentication\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\InterMediateRoute.resx">
       <DependentUpon>InterMediateRoute.cs</DependentUpon>
     </EmbeddedResource>
