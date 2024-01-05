@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,7 +43,7 @@ namespace Cashier_Station.Models
 
                     while (reader.Read())
                     {
-                        tickets.Add($"Номер квитка: {reader["id"].ToString()} Номер маршруту: {reader["RouteId"].ToString()} Вартість: {reader["Price"].ToString()}");
+                        tickets.Add($"Ticket number: {reader["id"].ToString()} Route number: {reader["RouteId"].ToString()} Cost: {reader["Price"].ToString()}");
                         ticketid.Add(int.Parse(reader["id"].ToString()));
                         routeid.Add(int.Parse(reader["RouteId"].ToString()));
                     }
@@ -51,7 +52,7 @@ namespace Cashier_Station.Models
             }
             catch (Exception ex)
             {
-                MessageBox.Show("При завантаженні даних з бази даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while loading data from the database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine(ex.Message);
             }
             finally
@@ -67,17 +68,23 @@ namespace Cashier_Station.Models
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Ви впевнені, що хочете придбати цей квиток?", "Покупка", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var result = MessageBox.Show("Are you sure you want to buy this ticket?", "Purchase", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 if (UsrnameTextBox.Text == "" || SurnameTextBox.Text == "")
                 {
-                    MessageBox.Show("Поля не можуть бути пустими", "Покупка квитків", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Fields cannot be empty", "Purchase tickets", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
                     try
                     {
+                        client newClient = new client
+                        {
+                            Name = UsrnameTextBox.Text,
+                            Surname = SurnameTextBox.Text,
+                            TicketId = ticketid[IdTicket.selectedIndex]
+                        };
                         db.OpenConnection();
                         string query = "START TRANSACTION;" +
                             "INSERT INTO client (Name, Surname, TicketId) VALUES (@Name, @Surname, @TicketId);" +
@@ -88,23 +95,23 @@ namespace Cashier_Station.Models
 
                         using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
                         {
-                            cmd.Parameters.AddWithValue("@Name", UsrnameTextBox.Text);
-                            cmd.Parameters.AddWithValue("@Surname", SurnameTextBox.Text);
-                            cmd.Parameters.AddWithValue("@TicketId", ticketid[IdTicket.selectedIndex]);
+                            cmd.Parameters.AddWithValue("@Name", newClient.Name);
+                            cmd.Parameters.AddWithValue("@Surname", newClient.Surname);
+                            cmd.Parameters.AddWithValue("@TicketId", newClient.TicketId);
                             cmd.Parameters.AddWithValue("@RouteId", routeid[IdTicket.selectedIndex]);
                             cmd.Parameters.AddWithValue("@DateBuy", DateTime.Now);
 
                             cmd.ExecuteNonQuery();
                         }
 
-                        Console.WriteLine("Дані успішно відправлені");
-                        MessageBox.Show("Дані успішно відправлені\nДякуємо!", "Покупка квитків", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Console.WriteLine("Data has been successfully sent");
+                        MessageBox.Show("Data has been successfully sent\nThank you!", "Purchase tickets", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("При завантаженні даних виникла помилка");
+                        Console.WriteLine("An error occurred while uploading data");
                         Console.WriteLine(ex.Message);
-                        MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {

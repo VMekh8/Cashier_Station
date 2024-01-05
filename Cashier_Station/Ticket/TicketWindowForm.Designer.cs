@@ -42,20 +42,24 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(436, 9);
+            this.label1.Location = new System.Drawing.Point(581, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 39);
+            this.label1.Size = new System.Drawing.Size(152, 50);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Квитки";
+            this.label1.Text = "Tickets";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // TicketGridView
             // 
             this.TicketGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TicketGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.TicketGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TicketGridView.Location = new System.Drawing.Point(41, 51);
+            this.TicketGridView.Location = new System.Drawing.Point(55, 63);
+            this.TicketGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TicketGridView.Name = "TicketGridView";
-            this.TicketGridView.Size = new System.Drawing.Size(909, 294);
+            this.TicketGridView.RowHeadersWidth = 51;
+            this.TicketGridView.Size = new System.Drawing.Size(1212, 362);
             this.TicketGridView.TabIndex = 3;
             // 
             // RouteIdForTicket
@@ -69,10 +73,10 @@
             this.RouteIdForTicket.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RouteIdForTicket.ForeColor = System.Drawing.Color.White;
             this.RouteIdForTicket.isPassword = false;
-            this.RouteIdForTicket.Location = new System.Drawing.Point(413, 361);
-            this.RouteIdForTicket.Margin = new System.Windows.Forms.Padding(5);
+            this.RouteIdForTicket.Location = new System.Drawing.Point(551, 444);
+            this.RouteIdForTicket.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.RouteIdForTicket.Name = "RouteIdForTicket";
-            this.RouteIdForTicket.Size = new System.Drawing.Size(314, 46);
+            this.RouteIdForTicket.Size = new System.Drawing.Size(419, 57);
             this.RouteIdForTicket.TabIndex = 4;
             this.RouteIdForTicket.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -82,11 +86,12 @@
             this.FindSeatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FindSeatButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FindSeatButton.ForeColor = System.Drawing.Color.White;
-            this.FindSeatButton.Location = new System.Drawing.Point(735, 361);
+            this.FindSeatButton.Location = new System.Drawing.Point(980, 444);
+            this.FindSeatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FindSeatButton.Name = "FindSeatButton";
-            this.FindSeatButton.Size = new System.Drawing.Size(215, 46);
+            this.FindSeatButton.Size = new System.Drawing.Size(287, 57);
             this.FindSeatButton.TabIndex = 7;
-            this.FindSeatButton.Text = "Знайти місця";
+            this.FindSeatButton.Text = "Find places";
             this.FindSeatButton.UseVisualStyleBackColor = true;
             this.FindSeatButton.Click += new System.EventHandler(this.FindSeatButton_Click);
             // 
@@ -96,11 +101,12 @@
             this.BuyTicketButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BuyTicketButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BuyTicketButton.ForeColor = System.Drawing.Color.White;
-            this.BuyTicketButton.Location = new System.Drawing.Point(41, 361);
+            this.BuyTicketButton.Location = new System.Drawing.Point(55, 444);
+            this.BuyTicketButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BuyTicketButton.Name = "BuyTicketButton";
-            this.BuyTicketButton.Size = new System.Drawing.Size(215, 46);
+            this.BuyTicketButton.Size = new System.Drawing.Size(287, 57);
             this.BuyTicketButton.TabIndex = 8;
-            this.BuyTicketButton.Text = "Купити квиток";
+            this.BuyTicketButton.Text = "Buy a ticket";
             this.BuyTicketButton.UseVisualStyleBackColor = true;
             this.BuyTicketButton.Click += new System.EventHandler(this.BuyTicketButton_Click);
             // 
@@ -110,20 +116,21 @@
             this.ReturnTicketButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReturnTicketButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ReturnTicketButton.ForeColor = System.Drawing.Color.White;
-            this.ReturnTicketButton.Location = new System.Drawing.Point(41, 415);
+            this.ReturnTicketButton.Location = new System.Drawing.Point(55, 511);
+            this.ReturnTicketButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ReturnTicketButton.Name = "ReturnTicketButton";
-            this.ReturnTicketButton.Size = new System.Drawing.Size(215, 46);
+            this.ReturnTicketButton.Size = new System.Drawing.Size(287, 57);
             this.ReturnTicketButton.TabIndex = 9;
-            this.ReturnTicketButton.Text = "Повернути квиток";
+            this.ReturnTicketButton.Text = "Return a ticket";
             this.ReturnTicketButton.UseVisualStyleBackColor = true;
             this.ReturnTicketButton.Click += new System.EventHandler(this.ReturnTicketButton_Click);
             // 
             // TicketWindowForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1000, 519);
+            this.ClientSize = new System.Drawing.Size(1333, 639);
             this.Controls.Add(this.ReturnTicketButton);
             this.Controls.Add(this.BuyTicketButton);
             this.Controls.Add(this.FindSeatButton);
@@ -131,6 +138,7 @@
             this.Controls.Add(this.TicketGridView);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TicketWindowForm";
             this.Text = "TicketWindowForm";
             ((System.ComponentModel.ISupportInitialize)(this.TicketGridView)).EndInit();

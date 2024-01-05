@@ -69,9 +69,10 @@
             this.PanelTicket.Controls.Add(this.label2);
             this.PanelTicket.Controls.Add(this.label1);
             this.PanelTicket.Controls.Add(this.panel1);
-            this.PanelTicket.Location = new System.Drawing.Point(23, 39);
+            this.PanelTicket.Location = new System.Drawing.Point(31, 48);
+            this.PanelTicket.Margin = new System.Windows.Forms.Padding(4);
             this.PanelTicket.Name = "PanelTicket";
-            this.PanelTicket.Size = new System.Drawing.Size(302, 426);
+            this.PanelTicket.Size = new System.Drawing.Size(403, 524);
             this.PanelTicket.TabIndex = 0;
             // 
             // GotoRouteButton
@@ -80,11 +81,12 @@
             this.GotoRouteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GotoRouteButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.GotoRouteButton.ForeColor = System.Drawing.Color.White;
-            this.GotoRouteButton.Location = new System.Drawing.Point(59, 364);
+            this.GotoRouteButton.Location = new System.Drawing.Point(79, 448);
+            this.GotoRouteButton.Margin = new System.Windows.Forms.Padding(4);
             this.GotoRouteButton.Name = "GotoRouteButton";
-            this.GotoRouteButton.Size = new System.Drawing.Size(179, 45);
+            this.GotoRouteButton.Size = new System.Drawing.Size(239, 55);
             this.GotoRouteButton.TabIndex = 6;
-            this.GotoRouteButton.Text = "Перейти";
+            this.GotoRouteButton.Text = "Go to";
             this.GotoRouteButton.UseVisualStyleBackColor = true;
             this.GotoRouteButton.Click += new System.EventHandler(this.GotoRouteButton_Click);
             // 
@@ -93,8 +95,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::Cashier_Station.Properties.Resources.routes;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(302, 196);
+            this.pictureBox1.Size = new System.Drawing.Size(403, 241);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -104,9 +107,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 325);
+            this.label4.Location = new System.Drawing.Point(4, 400);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 19);
+            this.label4.Size = new System.Drawing.Size(0, 26);
             this.label4.TabIndex = 4;
             // 
             // label3
@@ -114,40 +118,44 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 311);
+            this.label3.Location = new System.Drawing.Point(4, 383);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 19);
+            this.label3.Size = new System.Drawing.Size(346, 26);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Аналіз частоти зайнятості";
+            this.label3.Text = "Analysis of employment frequency";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 268);
+            this.label2.Location = new System.Drawing.Point(4, 330);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(291, 19);
+            this.label2.Size = new System.Drawing.Size(304, 26);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Визначення найдовшого маршруту";
+            this.label2.Text = "Determining the longest route";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(86, 208);
+            this.label1.Location = new System.Drawing.Point(144, 256);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 26);
+            this.label1.Size = new System.Drawing.Size(99, 31);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Маршрути";
+            this.label1.Text = "Routes";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(50, 202);
+            this.panel1.Location = new System.Drawing.Point(67, 249);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 3);
+            this.panel1.Size = new System.Drawing.Size(267, 4);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -160,9 +168,10 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(352, 39);
+            this.panel2.Location = new System.Drawing.Point(469, 48);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(302, 426);
+            this.panel2.Size = new System.Drawing.Size(403, 524);
             this.panel2.TabIndex = 1;
             // 
             // label5
@@ -170,11 +179,12 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 315);
+            this.label5.Location = new System.Drawing.Point(4, 388);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(181, 19);
+            this.label5.Size = new System.Drawing.Size(213, 26);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Пошук вільних місць ";
+            this.label5.Text = "Search for free seats ";
             // 
             // GotTicketButton
             // 
@@ -182,11 +192,12 @@
             this.GotTicketButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GotTicketButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.GotTicketButton.ForeColor = System.Drawing.Color.White;
-            this.GotTicketButton.Location = new System.Drawing.Point(59, 364);
+            this.GotTicketButton.Location = new System.Drawing.Point(79, 448);
+            this.GotTicketButton.Margin = new System.Windows.Forms.Padding(4);
             this.GotTicketButton.Name = "GotTicketButton";
-            this.GotTicketButton.Size = new System.Drawing.Size(179, 45);
+            this.GotTicketButton.Size = new System.Drawing.Size(239, 55);
             this.GotTicketButton.TabIndex = 6;
-            this.GotTicketButton.Text = "Перейти";
+            this.GotTicketButton.Text = "Go to";
             this.GotTicketButton.UseVisualStyleBackColor = true;
             this.GotTicketButton.Click += new System.EventHandler(this.GotTicketButton_Click);
             // 
@@ -195,8 +206,9 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox2.Image = global::Cashier_Station.Properties.Resources.tickets;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(302, 196);
+            this.pictureBox2.Size = new System.Drawing.Size(403, 241);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
@@ -206,40 +218,44 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 279);
+            this.label6.Location = new System.Drawing.Point(4, 343);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(169, 19);
+            this.label6.Size = new System.Drawing.Size(171, 26);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Повернення квитків";
+            this.label6.Text = "Return of tickets";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 245);
+            this.label7.Location = new System.Drawing.Point(4, 302);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 19);
+            this.label7.Size = new System.Drawing.Size(166, 26);
             this.label7.TabIndex = 2;
-            this.label7.Text = "Покупка квитків";
+            this.label7.Text = "Purchase tickets";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(113, 208);
+            this.label8.Location = new System.Drawing.Point(151, 256);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 26);
+            this.label8.Size = new System.Drawing.Size(98, 31);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Квитки";
+            this.label8.Text = "Tickets";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(50, 202);
+            this.panel3.Location = new System.Drawing.Point(67, 249);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 3);
+            this.panel3.Size = new System.Drawing.Size(267, 4);
             this.panel3.TabIndex = 0;
             // 
             // panel4
@@ -251,9 +267,10 @@
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(677, 39);
+            this.panel4.Location = new System.Drawing.Point(903, 48);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(302, 426);
+            this.panel4.Size = new System.Drawing.Size(403, 524);
             this.panel4.TabIndex = 7;
             // 
             // GoToClientButton
@@ -262,11 +279,12 @@
             this.GoToClientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoToClientButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.GoToClientButton.ForeColor = System.Drawing.Color.White;
-            this.GoToClientButton.Location = new System.Drawing.Point(59, 364);
+            this.GoToClientButton.Location = new System.Drawing.Point(79, 448);
+            this.GoToClientButton.Margin = new System.Windows.Forms.Padding(4);
             this.GoToClientButton.Name = "GoToClientButton";
-            this.GoToClientButton.Size = new System.Drawing.Size(179, 45);
+            this.GoToClientButton.Size = new System.Drawing.Size(239, 55);
             this.GoToClientButton.TabIndex = 6;
-            this.GoToClientButton.Text = "Перейти";
+            this.GoToClientButton.Text = "Go to";
             this.GoToClientButton.UseVisualStyleBackColor = true;
             this.GoToClientButton.Click += new System.EventHandler(this.GoToClientButton_Click);
             // 
@@ -275,9 +293,10 @@
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox3.Image = global::Cashier_Station.Properties.Resources.user_interface;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Padding = new System.Windows.Forms.Padding(8);
-            this.pictureBox3.Size = new System.Drawing.Size(302, 196);
+            this.pictureBox3.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.pictureBox3.Size = new System.Drawing.Size(403, 241);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
@@ -287,52 +306,57 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(3, 297);
+            this.label10.Location = new System.Drawing.Point(4, 366);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(288, 19);
+            this.label10.Size = new System.Drawing.Size(400, 26);
             this.label10.TabIndex = 3;
-            this.label10.Text = "Виведення інформації про клієнтів";
+            this.label10.Text = "Displaying information about customers";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(3, 256);
+            this.label11.Location = new System.Drawing.Point(4, 315);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(237, 19);
+            this.label11.Size = new System.Drawing.Size(267, 26);
             this.label11.TabIndex = 2;
-            this.label11.Text = "Пошук квитків за прізвищем";
+            this.label11.Text = "Search for tickets by name";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(109, 211);
+            this.label12.Location = new System.Drawing.Point(127, 256);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 26);
+            this.label12.Size = new System.Drawing.Size(144, 31);
             this.label12.TabIndex = 1;
-            this.label12.Text = "Клієнти";
+            this.label12.Text = "Customers";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(50, 205);
+            this.panel5.Location = new System.Drawing.Point(67, 252);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 3);
+            this.panel5.Size = new System.Drawing.Size(267, 4);
             this.panel5.TabIndex = 0;
             // 
             // MainWindowForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1000, 519);
+            this.ClientSize = new System.Drawing.Size(1333, 639);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelTicket);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainWindowForm";
             this.Text = "MainWindowForm";
             this.PanelTicket.ResumeLayout(false);

@@ -14,11 +14,47 @@ namespace Cashier_Station
 {
     public partial class AdminAddTicketWindow : Form
     {
-        DataBase db;
+        DataBase db = new DataBase();
+        
         public AdminAddTicketWindow()
         {
             InitializeComponent();
-            
+            FillDropDown();
+        }
+
+        private void FillDropDown()
+        {
+            List<string> routeid = new List<string>();
+            try
+            {
+                db.OpenConnection();
+                string query = "SELECT id FROM route";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                {
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        routeid.Add(reader["id"].ToString());
+                    }
+                    reader.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while loading data from the database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                db.CloseConnection();
+            }
+
+            foreach (var item in routeid)
+            {
+                IdRouteDropDown.AddItem(item.ToString());
+            }
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -28,7 +64,7 @@ namespace Cashier_Station
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Ви впевненні, що хочете додати цю інформацію?", "Додавання інформації", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var result = MessageBox.Show("Are you sure you want to add this information?", "Adding information", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 try
@@ -36,35 +72,43 @@ namespace Cashier_Station
 
 
                     db = new DataBase();
-                    if (IdTicketTextBox.Text == "" || PriceTicketTextBox.Text == "" || RouteNumberTextBox.Text == "")
+                    if (IdTicketTextBox.Text == "" || PriceTicketTextBox.Text == "" || IdRouteDropDown.selectedValue == "")
                     {
-                        MessageBox.Show("Поля не можуть бути пустими або від'ємними", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Fields cannot be empty or negative", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
+                        Ticket newTicket = new Ticket
+                        {
+                            Id = int.Parse(IdTicketTextBox.Text),
+                            RouteId = int.Parse(IdRouteDropDown.selectedValue),
+                            Price = Convert.ToDecimal(PriceTicketTextBox.Text),
+                            IsActive = false
+                        };
+
                         db.OpenConnection();
                         string query = "INSERT INTO ticket (id, RouteId, Price, IsActive) VAlUES (@id, @RouteId, @Price, @IsActive)";
 
                         using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
                         {
 
-                            cmd.Parameters.AddWithValue("@id", int.Parse(IdTicketTextBox.Text));
-                            cmd.Parameters.AddWithValue("@RouteId", int.Parse(RouteNumberTextBox.Text));
-                            cmd.Parameters.AddWithValue("@Price", int.Parse(PriceTicketTextBox.Text));
-                            cmd.Parameters.AddWithValue("@IsActive", false);
+                            cmd.Parameters.AddWithValue("@id", newTicket.Id);
+                            cmd.Parameters.AddWithValue("@RouteId", newTicket.RouteId);
+                            cmd.Parameters.AddWithValue("@Price", newTicket.Price);
+                            cmd.Parameters.AddWithValue("@IsActive", newTicket.IsActive);
 
 
                             cmd.ExecuteNonQuery();
                         }
-                        Console.WriteLine("Дані успішно додано");
-                        MessageBox.Show("Дані успішно додано", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                        MessageBox.Show("Data added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("При додаванні даних у таблицю ticket виникла помилка");
-                    Console.WriteLine($"Помилка: {ex.Message}");
-                    MessageBox.Show("Дані не були додані до бази даних", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    Console.WriteLine($"Error: {ex.Message}");
+                    MessageBox.Show("Data has not been added to the database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 finally
                 {

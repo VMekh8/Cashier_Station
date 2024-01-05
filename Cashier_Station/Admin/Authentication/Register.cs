@@ -43,8 +43,8 @@ namespace Cashier_Station.Admin.Authentication
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"При зчитуванні кодового слова виникла помилка: {ex.Message}");
-                MessageBox.Show("При зчитуванні кодового слова виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"An error occurred while reading a code word: {ex.Message}");
+                MessageBox.Show("An error occurred while reading a code word", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
             }
             finally
@@ -72,28 +72,52 @@ namespace Cashier_Station.Admin.Authentication
                         try
                         {
                             db.OpenConnection();
+                            string queryCheckExistence = "SELECT COUNT(*) FROM workers WHERE login = @login";
                             string query = "INSERT INTO workers (login, password) VALUES (@login, @pass)";
+                            bool isExist=false;
                             for (int i = 0; i < lines.Length; i += 2)
                             {
+                                string login = lines[i];
+                                string password = lines[i + 1];
+
+                                using (MySqlCommand checkCmd = new MySqlCommand(queryCheckExistence, db.GetConnection()))
+                                {
+                                    checkCmd.Parameters.AddWithValue("@login", login);
+                                    int existingCount = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                                    if (existingCount > 0)
+                                    {
+                                        // The login already exists, handle accordingly (e.g., skip, show error message)
+                                        Console.WriteLine($"Login '{login}' already exists. Skipping insertion.");
+                                        MessageBox.Show($"Login '{login}' already exists. Skipping insertion.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        isExist = true;
+                                        continue;
+                                    }
+                                }
+
                                 using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
                                 {
-
-                                    string login = lines[i];
-                                    string password = lines[i + 1];
-
                                     cmd.Parameters.AddWithValue("@login", login);
                                     cmd.Parameters.AddWithValue("@pass", password);
 
                                     cmd.ExecuteNonQuery();
                                 }
                             }
-                            Console.WriteLine("Дані успішно відправлені у базу даних");
-                            MessageBox.Show("Створення облікових записів успішне", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (isExist)
+                            {
+                                Console.WriteLine($"Login already exists. Skipping insertion.");
+                                MessageBox.Show("Some logins already exist. Change them for successful registration.\nAccount creation is successful", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Data successfully sent to the database");
+                                MessageBox.Show("Account creation is successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine($"При записі даних у базу даних виникла помикла: {ex.Message}");
-                            MessageBox.Show("При записі даних у базу даних виникла помикла", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Console.WriteLine($"An error occurred while writing data to the database: {ex.Message}");
+                            MessageBox.Show("An error occurred while writing data to the database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         finally
                         {
@@ -103,13 +127,13 @@ namespace Cashier_Station.Admin.Authentication
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"При відкритті файлу виникла помикла: {ex.Message}");
-                    MessageBox.Show("При відкритті файлу виникла помикла", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Console.WriteLine($"An error occurred when opening a file: {ex.Message}");
+                    MessageBox.Show("An error occurred when opening a file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Кодові слова не співпадають\nДоступ заборонений", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Code words do not match\nAccess denied", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }

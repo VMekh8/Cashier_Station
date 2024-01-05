@@ -33,20 +33,20 @@ namespace Cashier_Station
                     RouteGridView.DataSource = ds.Tables[0];
                 }
 
-                RouteGridView.Columns[0].HeaderText = "Номер маршруту";
-                RouteGridView.Columns[1].HeaderText = "Точка відправлення";
-                RouteGridView.Columns[2].HeaderText = "Точка прибуття";
-                RouteGridView.Columns[3].HeaderText = "Дата відправлення";
-                RouteGridView.Columns[4].HeaderText = "Дата прибуття";
-                RouteGridView.Columns[5].HeaderText = "Кількість місць";
-                RouteGridView.Columns[6].HeaderText = "Номер транспорту";
+                RouteGridView.Columns[0].HeaderText = "Route number";
+                RouteGridView.Columns[1].HeaderText = "Point of departure";
+                RouteGridView.Columns[2].HeaderText = "Point of arrival";
+                RouteGridView.Columns[3].HeaderText = "Date of departure";
+                RouteGridView.Columns[4].HeaderText = "Date of arrival";
+                RouteGridView.Columns[5].HeaderText = "Number of seats";
+                RouteGridView.Columns[6].HeaderText = "Transport number";
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("При завантаженні даних виникла помилка");
+                
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -65,10 +65,21 @@ namespace Cashier_Station
             {
 
                 string queryString = @"
-                    SELECT * 
-                    FROM route
-                    WHERE StartPoint = @StartPoint AND EndPoint = @EndPoint
-                    ORDER BY DateofStart ASC;";
+                    SELECT 
+                route.*,
+                intermediateroute.NameStation,
+                intermediateroute.DistanceFromStart,
+                intermediateroute.DistanceToEnd
+            FROM 
+                route
+            LEFT JOIN 
+                intermediateroute ON route.id = intermediateroute.RouteId
+            WHERE 
+                (StartPoint = @StartPoint AND EndPoint = @EndPoint)
+                OR (StartPoint = @StartPoint AND intermediateroute.NameStation IS NOT NULL)
+                OR (intermediateroute.NameStation = @StartPoint AND EndPoint = @EndPoint)
+            ORDER BY 
+                DateofStart ASC;";
 
                 using (MySqlCommand command = new MySqlCommand(queryString, db.GetConnection()))
                 {
@@ -86,20 +97,20 @@ namespace Cashier_Station
                     if (table.Rows.Count > 0)
                     {
                         DataRow firstRow = table.Rows[0];
-                        MessageBox.Show($"Найближчий потяг вирушає цим маршрутом: {firstRow["DateofStart"].ToString()}", "Аналіз маршрутів", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"The nearest train runs on this route: {firstRow["DateofStart"].ToString()}", "Analysis of routes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Немає доступних потягів.");
+                        MessageBox.Show("No trains available.");
                     }
 
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("При завантаженні даних виникла помилка");
+                
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

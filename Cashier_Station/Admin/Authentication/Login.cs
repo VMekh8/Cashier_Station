@@ -25,7 +25,7 @@ namespace Cashier_Station.Admin.Authentication
         {
             if (LoginTextBox.Text == "" || PasswordTextBox.Text == "")
             {
-                MessageBox.Show("Не всі поля заповнені\nАвторизація неможлива", "Авторизація", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Not all fields are filled in\nAuthorization is not possible", "Authorization", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -52,7 +52,7 @@ namespace Cashier_Station.Admin.Authentication
                         }
                         else
                         {
-                            MessageBox.Show("Невірний логін або пароль\n        Спробуйте знову", "Авторизація неможлива!",
+                            MessageBox.Show("Incorrect login or password\nTry again", "Authorization is not possible!",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                             LoginTextBox.Text = string.Empty;
                             PasswordTextBox.Text = string.Empty;
@@ -61,9 +61,9 @@ namespace Cashier_Station.Admin.Authentication
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Авторизація неможлива");
+                    Console.WriteLine("Authorization is not possible");
                     Console.WriteLine(ex.Message);
-                    MessageBox.Show("При авторизації виникла помилка", "Авторизація", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("An error occurred during authorization", "Authorization", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {

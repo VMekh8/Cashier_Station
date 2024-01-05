@@ -46,7 +46,7 @@ namespace Cashier_Station
             }
             catch (Exception ex)
             {
-                MessageBox.Show("При завантаженні даних з бази даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while loading data from the database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine(ex.Message);
             }
             finally
@@ -62,7 +62,7 @@ namespace Cashier_Station
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Ви впевненні, що хочете видалення цю інформацію?", "Видалення інформації",
+            var result = MessageBox.Show("Are you sure you want to delete this information?", "Deleting information",
               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
@@ -80,15 +80,15 @@ namespace Cashier_Station
                         cmd.ExecuteNonQuery();
                     }
 
-                    Console.WriteLine("Видалення відбулося успішно");
-                    MessageBox.Show("Видалення відбулося успішно", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Console.WriteLine("The removal was successful");
+                    MessageBox.Show("The removal was successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("При видаленні даних з таблиці ticket виникла помилка");
-                    Console.WriteLine($"Помилка: {ex.Message}");
-                    MessageBox.Show("При видаленні даних з таблиці ticket виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Console.WriteLine("An error occurred while deleting data from the 'ticket' table");
+                    Console.WriteLine($"Error: {ex.Message}");
+                    MessageBox.Show("An error occurred while deleting data from the 'ticket' table", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {

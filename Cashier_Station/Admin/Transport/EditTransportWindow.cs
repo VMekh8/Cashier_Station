@@ -48,7 +48,7 @@ namespace Cashier_Station.Admin
             }
             catch (Exception ex)
             {
-                MessageBox.Show("При завантаженні даних з бази даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while loading data from the database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine(ex.Message);
             }
             finally
@@ -74,16 +74,16 @@ namespace Cashier_Station.Admin
                     adapter.Fill(ds);
                     TransportGridView.DataSource = ds.Tables[0];
                 }
-                TransportGridView.Columns[0].HeaderText = "Номер транспорту";
-                TransportGridView.Columns[1].HeaderText = "Назва транспорту";
+                TransportGridView.Columns[0].HeaderText = "Transport number";
+                TransportGridView.Columns[1].HeaderText = "Name of transport";
                 
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("При завантаженні даних виникла помилка");
+                Console.WriteLine("An error occurred while uploading data");
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -93,7 +93,7 @@ namespace Cashier_Station.Admin
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Ви впевнені, що хочете відправити цю інформацію?", "Редагування", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var result = MessageBox.Show("Are you sure you want to send this information?", "Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 try
@@ -108,14 +108,14 @@ namespace Cashier_Station.Admin
 
                         cmd.ExecuteNonQuery();
                     }
-                    Console.WriteLine("Дані успішно відправлені");
-                    MessageBox.Show("Дані успішно відправленні", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Console.WriteLine("Data has been successfully sent");
+                    MessageBox.Show("Data has been successfully sent", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("При редагуванні даних виникла помилка");
+                    Console.WriteLine("An error occurred while editing data");
                     Console.WriteLine(ex.Message.ToString());
-                    MessageBox.Show("При редагуванні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("An error occurred while editing data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -149,9 +149,9 @@ namespace Cashier_Station.Admin
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Виникла помилка при вибірці даних");
+                Console.WriteLine("An error occurred when selecting data");
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

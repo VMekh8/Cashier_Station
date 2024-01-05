@@ -48,9 +48,10 @@
             this.panel1.Controls.Add(this.SubmitButton);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.LoginTextBox);
-            this.panel1.Location = new System.Drawing.Point(215, 69);
+            this.panel1.Location = new System.Drawing.Point(287, 85);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(570, 380);
+            this.panel1.Size = new System.Drawing.Size(760, 468);
             this.panel1.TabIndex = 2;
             // 
             // RegistrationButton
@@ -58,11 +59,12 @@
             this.RegistrationButton.AutoSize = true;
             this.RegistrationButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RegistrationButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.RegistrationButton.Location = new System.Drawing.Point(438, 258);
+            this.RegistrationButton.Location = new System.Drawing.Point(584, 318);
+            this.RegistrationButton.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RegistrationButton.Name = "RegistrationButton";
-            this.RegistrationButton.Size = new System.Drawing.Size(100, 22);
+            this.RegistrationButton.Size = new System.Drawing.Size(135, 27);
             this.RegistrationButton.TabIndex = 6;
-            this.RegistrationButton.Text = "Реєстрація";
+            this.RegistrationButton.Text = "Registration";
             this.RegistrationButton.Click += new System.EventHandler(this.RegistrationButton_Click);
             // 
             // label1
@@ -70,11 +72,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(32, 160);
+            this.label1.Location = new System.Drawing.Point(43, 197);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 31);
+            this.label1.Size = new System.Drawing.Size(163, 40);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Пароль";
+            this.label1.Text = "Password";
             // 
             // PasswordTextBox
             // 
@@ -87,10 +90,10 @@
             this.PasswordTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PasswordTextBox.ForeColor = System.Drawing.Color.White;
             this.PasswordTextBox.isPassword = true;
-            this.PasswordTextBox.Location = new System.Drawing.Point(38, 196);
-            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.PasswordTextBox.Location = new System.Drawing.Point(51, 241);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(500, 46);
+            this.PasswordTextBox.Size = new System.Drawing.Size(667, 57);
             this.PasswordTextBox.TabIndex = 4;
             this.PasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -100,11 +103,12 @@
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SubmitButton.ForeColor = System.Drawing.Color.White;
-            this.SubmitButton.Location = new System.Drawing.Point(178, 306);
+            this.SubmitButton.Location = new System.Drawing.Point(237, 377);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(221, 58);
+            this.SubmitButton.Size = new System.Drawing.Size(295, 71);
             this.SubmitButton.TabIndex = 3;
-            this.SubmitButton.Text = "Увійти";
+            this.SubmitButton.Text = "Sign in";
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
@@ -113,11 +117,12 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(32, 64);
+            this.label2.Location = new System.Drawing.Point(43, 79);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 31);
+            this.label2.Size = new System.Drawing.Size(101, 40);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Логін";
+            this.label2.Text = "Login";
             // 
             // LoginTextBox
             // 
@@ -130,10 +135,10 @@
             this.LoginTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LoginTextBox.ForeColor = System.Drawing.Color.White;
             this.LoginTextBox.isPassword = false;
-            this.LoginTextBox.Location = new System.Drawing.Point(38, 100);
-            this.LoginTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.LoginTextBox.Location = new System.Drawing.Point(51, 123);
+            this.LoginTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.LoginTextBox.Name = "LoginTextBox";
-            this.LoginTextBox.Size = new System.Drawing.Size(500, 46);
+            this.LoginTextBox.Size = new System.Drawing.Size(667, 57);
             this.LoginTextBox.TabIndex = 0;
             this.LoginTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -142,21 +147,23 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(359, 23);
+            this.label3.Location = new System.Drawing.Point(479, 28);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(324, 31);
+            this.label3.Size = new System.Drawing.Size(373, 40);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Авторизація працівника";
+            this.label3.Text = "Employee authorization";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1000, 519);
+            this.ClientSize = new System.Drawing.Size(1333, 639);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.Text = "Login";
             this.panel1.ResumeLayout(false);

@@ -19,12 +19,12 @@ namespace Cashier_Station.Admin
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            var DialogRes = MessageBox.Show("Ви справді бажаєде додати цю інформацію?", "Додавання інформації", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var DialogRes = MessageBox.Show("Do you really want to add this information?", "Adding information", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (DialogRes  == DialogResult.Yes)
             {
                 if (IdTrasportTextBox.Text == "" || NameTransportTextBox.Text == "" || int.Parse(IdTrasportTextBox.Text) <= 0)
                 {
-                    MessageBox.Show("Поля не можуть бути пустими або від'ємними", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Fields cannot be empty or negative", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 else
@@ -34,23 +34,29 @@ namespace Cashier_Station.Admin
                         db = new DataBase();
                         db.OpenConnection();
 
+                        Transport newTransport = new Transport
+                        {
+                            Id = int.Parse(IdTrasportTextBox.Text),
+                            Name = NameTransportTextBox.Text.ToString()
+                        };
+
                         string query = "INSERT INTO transport (id, name) VALUES (@id, @name)";
 
                         using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
                         {
-                            cmd.Parameters.AddWithValue("@id", int.Parse(IdTrasportTextBox.Text));
-                            cmd.Parameters.AddWithValue("@name", NameTransportTextBox.Text.ToString());
+                            cmd.Parameters.AddWithValue("@id", newTransport.Id);
+                            cmd.Parameters.AddWithValue("@name", newTransport.Name);
 
                             cmd.ExecuteNonQuery();
                         }
-                        Console.WriteLine("Дані успішно додано");
-                        MessageBox.Show("Дані успішно додано", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Console.WriteLine("Data added successfully");
+                        MessageBox.Show("Data added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("При додаванні даних у таблицю transport виникла помилка");
+                        Console.WriteLine("An error occurred while adding data to the 'transport' table");
                         Console.WriteLine($"Помилка: {ex.Message}");
-                        MessageBox.Show("Дані не були додані до бази даних", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Data has not been added to the database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     finally
                     {

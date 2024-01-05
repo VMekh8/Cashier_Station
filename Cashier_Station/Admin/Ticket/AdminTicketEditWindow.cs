@@ -18,11 +18,12 @@ namespace Cashier_Station
         {
             InitializeComponent();
             FillDataGrid();
-            FillDropDown();
+            FillDropDownTicket();
+            FillDropDownRoute();
         }
 
 
-        private void FillDropDown()
+        private void FillDropDownTicket()
         {
             List<string> routeid = new List<string>();
             try
@@ -43,7 +44,7 @@ namespace Cashier_Station
             }
             catch (Exception ex)
             {
-                MessageBox.Show("При завантаженні даних з бази даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while loading data from the database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine(ex.Message);
             }
             finally
@@ -54,6 +55,41 @@ namespace Cashier_Station
             foreach (var item in routeid)
             {
                 IdTicketDropDown.AddItem(item.ToString());
+            }
+        }
+
+        private void FillDropDownRoute()
+        {
+            List<string> routeid = new List<string>();
+            try
+            {
+                db.OpenConnection();
+                string query = "SELECT id FROM route";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                {
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        routeid.Add(reader["id"].ToString());
+                    }
+                    reader.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while loading data from the database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                db.CloseConnection();
+            }
+
+            foreach (var item in routeid)
+            {
+                IdRouteDropDown.AddItem(item.ToString());
             }
         }
 
@@ -69,17 +105,17 @@ namespace Cashier_Station
                     adapter.Fill(ds);
                     TicketGridView.DataSource = ds.Tables[0];
                 }
-                TicketGridView.Columns[1].HeaderText = "Id маршруту";
-                TicketGridView.Columns[2].HeaderText = "Вартість";
-                TicketGridView.Columns[3].HeaderText = "Дата покупки";
-                TicketGridView.Columns[4].HeaderText = "Чи активний?";
+                TicketGridView.Columns[1].HeaderText = "Route id";
+                TicketGridView.Columns[2].HeaderText = "Cost";
+                TicketGridView.Columns[3].HeaderText = "Date of purchase";
+                TicketGridView.Columns[4].HeaderText = "Active or not?";
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("При завантаженні даних виникла помилка");
+                Console.WriteLine("An error occurred while uploading data");
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             { 
@@ -95,46 +131,56 @@ namespace Cashier_Station
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            if (RouteNumberTextBox.Text == "" || TicketPriceTextBox.Text == "")
+            try
             {
-                var result = MessageBox.Show("Ви не заповнили всі поля, чи бажаєте ви редагувати цей запис?", "Редагування", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
+                if (IdRouteDropDown.selectedValue == "" || TicketPriceTextBox.Text == "")
                 {
-                    MessageBox.Show("Тоді заповність всі поля", "Редагування", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var result = MessageBox.Show("You have not filled in all the fields, do you want to edit this record?", "Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        MessageBox.Show("Then fill in all the fields", "Edit", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        db.OpenConnection();
+                        string query = "UPDATE ticket SET RouteId = @RouteId, Price = @Price WHERE id = @id";
+
+                        using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                        {
+                            cmd.Parameters.AddWithValue("@RouteId", int.Parse(IdRouteDropDown.selectedValue));
+                            cmd.Parameters.AddWithValue("@Price", double.Parse(TicketPriceTextBox.Text));
+                            cmd.Parameters.AddWithValue("@id", int.Parse(IdTicketDropDown.selectedValue));
+
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        Console.WriteLine("Changes have been successfully implemented");
+                        MessageBox.Show("Changes have been successfully implemented", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("An error occurred while editing data");
+                        Console.WriteLine(ex.Message.ToString());
+                        MessageBox.Show("An error occurred while editing data", "Уккщу", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    finally
+                    {
+                        db.CloseConnection();
+                        FillDataGrid();
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                try
-                {
-                    db.OpenConnection();
-                    string query = "UPDATE ticket SET RouteId = @RouteId, Price = @Price WHERE id = @id";
+                Console.WriteLine("An error occurred while editing data");
+                Console.WriteLine(ex.Message.ToString());
+                MessageBox.Show("An error occurred while editing data", "Уккщу", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
-                    {
-                        cmd.Parameters.AddWithValue("@RouteId", int.Parse(RouteNumberTextBox.Text));
-                        cmd.Parameters.AddWithValue("@Price", int.Parse(TicketPriceTextBox.Text));
-                        cmd.Parameters.AddWithValue("@id", int.Parse(IdTicketDropDown.selectedValue));
-
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    Console.WriteLine("Зміни успішно внесені");
-                    MessageBox.Show("Зміни успішно внесені", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("При редагуванні даних виникла помилка");
-                    Console.WriteLine(ex.Message.ToString());
-                    MessageBox.Show("При редагуванні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-                finally
-                { 
-                    db.CloseConnection(); 
-                    FillDataGrid();
-                }
             }
         }
     }

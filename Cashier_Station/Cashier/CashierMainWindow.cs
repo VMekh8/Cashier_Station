@@ -37,7 +37,7 @@ namespace Cashier_Station
                         decimal totalprice = reader.GetDecimal("TotalPrice");
                         int ticketcount = reader.GetInt32("TotalTickets");
 
-                        label3.Text = totalprice.ToString() + " грн.";
+                        label3.Text = totalprice.ToString() + " UAH";
                         label4.Text = ticketcount.ToString();
                    }
                 }
@@ -45,7 +45,7 @@ namespace Cashier_Station
             }
             catch (Exception)
             {
-                MessageBox.Show("Немає жодного проданого квитка", "Обрахування вартості", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("There are no tickets sold", "Calculating the cost", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally
             {
@@ -67,17 +67,17 @@ namespace Cashier_Station
                     adapter.Fill(ds);
                     TicketGridView.DataSource = ds.Tables[0];
                 }
-                TicketGridView.Columns[1].HeaderText = "Id маршруту";
-                TicketGridView.Columns[2].HeaderText = "Вартість";
-                TicketGridView.Columns[3].HeaderText = "Дата покупки";
-                TicketGridView.Columns[4].HeaderText = "Чи активний?";
+                TicketGridView.Columns[1].HeaderText = "Route id";
+                TicketGridView.Columns[2].HeaderText = "Cost";
+                TicketGridView.Columns[3].HeaderText = "Date of purchase";
+                TicketGridView.Columns[4].HeaderText = "Active or not?";
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("При завантаженні даних виникла помилка");
+                Console.WriteLine("An error occurred while uploading data");
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

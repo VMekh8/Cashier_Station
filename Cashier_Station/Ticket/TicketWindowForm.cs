@@ -35,20 +35,20 @@ namespace Cashier_Station
                     TicketGridView.DataSource = ds.Tables[0];
                 }
 
-                TicketGridView.Columns[0].HeaderText = "Номер маршруту";
-                TicketGridView.Columns[1].HeaderText = "Точка відправлення";
-                TicketGridView.Columns[2].HeaderText = "Точка прибуття";
-                TicketGridView.Columns[3].HeaderText = "Дата відправлення";
-                TicketGridView.Columns[4].HeaderText = "Дата прибуття";
-                TicketGridView.Columns[5].HeaderText = "Кількість місць";
-                TicketGridView.Columns[6].HeaderText = "Номер транспорту";
+                TicketGridView.Columns[0].HeaderText = "Route number";
+                TicketGridView.Columns[1].HeaderText = "Point of departure";
+                TicketGridView.Columns[2].HeaderText = "Point of arrival";
+                TicketGridView.Columns[3].HeaderText = "Date of departure";
+                TicketGridView.Columns[4].HeaderText = "Date of arrival";
+                TicketGridView.Columns[5].HeaderText = "Number of seats";
+                TicketGridView.Columns[6].HeaderText = "Transport number";
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("При завантаженні даних виникла помилка");
+                Console.WriteLine("An error occurred while uploading data");
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -86,19 +86,19 @@ namespace Cashier_Station
                     }
                 }
 
-                TicketGridView.Columns[0].HeaderText = "Номер маршруту";
-                TicketGridView.Columns[1].HeaderText = "Точка відправлення";
-                TicketGridView.Columns[2].HeaderText = "Точка прибуття";
-                TicketGridView.Columns[3].HeaderText = "Дата відправлення";
-                TicketGridView.Columns[4].HeaderText = "Дата прибуття";
-                TicketGridView.Columns[5].HeaderText = "Кількість місць";
-                TicketGridView.Columns[6].HeaderText = "Номер транспорту";
+                TicketGridView.Columns[0].HeaderText = "Route number";
+                TicketGridView.Columns[1].HeaderText = "Point of departure";
+                TicketGridView.Columns[2].HeaderText = "Point of arrival";
+                TicketGridView.Columns[3].HeaderText = "Date of departure";
+                TicketGridView.Columns[4].HeaderText = "Date of arrival";
+                TicketGridView.Columns[5].HeaderText = "Number of seats";
+                TicketGridView.Columns[6].HeaderText = "Transport number";
             }
             catch (Exception ex)
             {
-                Console.WriteLine("При завантаженні даних виникла помилка");
+                Console.WriteLine("An error occurred while uploading data");
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

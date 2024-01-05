@@ -33,18 +33,18 @@ namespace Cashier_Station
                     ClientDataGrid.DataSource = ds.Tables[0];
                 }
 
-                ClientDataGrid.Columns[0].HeaderText = "Номер клієнта";
-                ClientDataGrid.Columns[1].HeaderText = "Ім'я";
-                ClientDataGrid.Columns[2].HeaderText = "Прізвище";
-                ClientDataGrid.Columns[3].HeaderText = "Номер квитка";
+                ClientDataGrid.Columns[0].HeaderText = "Customer number";
+                ClientDataGrid.Columns[1].HeaderText = "Name";
+                ClientDataGrid.Columns[2].HeaderText = "Surname";
+                ClientDataGrid.Columns[3].HeaderText = "Ticket number";
                
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("При завантаженні даних виникла помилка");
+                Console.WriteLine("An error occurred while uploading data");
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -71,16 +71,16 @@ namespace Cashier_Station
                     }
                 }
 
-                ClientDataGrid.Columns[0].HeaderText = "Номер клієнта";
-                ClientDataGrid.Columns[1].HeaderText = "Ім'я";
-                ClientDataGrid.Columns[2].HeaderText = "Прізвище";
-                ClientDataGrid.Columns[3].HeaderText = "Номер квитка";
+                ClientDataGrid.Columns[0].HeaderText = "Customer number";
+                ClientDataGrid.Columns[1].HeaderText = "Name";
+                ClientDataGrid.Columns[2].HeaderText = "Surname";
+                ClientDataGrid.Columns[3].HeaderText = "Ticket number";
             }
             catch (Exception ex)
             {
-                Console.WriteLine("При завантаженні даних виникла помилка");
+                Console.WriteLine("An error occurred while uploading data");
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

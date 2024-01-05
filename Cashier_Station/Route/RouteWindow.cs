@@ -29,16 +29,17 @@ namespace Cashier_Station
                 db.OpenConnection();
                 string query = @"
                 SELECT 
-                    MAX(intermediateroute.DistanceFromStart + intermediateroute.DistanceToEnd) AS MaxDistance, 
-                        route.StartPoint, 
-                        route.EndPoint 
-                    FROM 
-                        intermediateroute 
-                    INNER JOIN 
-                        route ON intermediateroute.RouteId = route.id 
-                    GROUP BY 
-                        route.StartPoint, 
-                        route.EndPoint";
+                    intermediateroute.DistanceFromStart + intermediateroute.DistanceToEnd AS TotalDistance, 
+                    route.StartPoint, 
+                    route.EndPoint 
+                FROM 
+                    intermediateroute 
+                INNER JOIN 
+                    route ON intermediateroute.RouteId = route.id 
+                ORDER BY 
+                    TotalDistance DESC
+                LIMIT 1;";
+
 
                 using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
                 {
@@ -48,13 +49,13 @@ namespace Cashier_Station
                     {
                         if (reader.Read())
                         {
-                            maxDistance = reader.GetDecimal("MaxDistance");
+                            maxDistance = reader.GetDecimal("TotalDistance");
                             startPoint = reader.GetString("StartPoint");
                             endPoint = reader.GetString("EndPoint");
 
 
-                            LongestRouteName.Text = $"{startPoint} - {endPoint}"; 
-                            LongestRouteRange.Text = $"{maxDistance} км."; 
+                            LongestRouteName.Text = $"{startPoint} - {endPoint}";
+                            LongestRouteRange.Text = $"{maxDistance} км.";
                         }
                     }
                 }
@@ -62,9 +63,9 @@ namespace Cashier_Station
             }
             catch (Exception ex)
             {
-                Console.WriteLine("При завантаженні даних виникла помилка");
+                
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -85,20 +86,20 @@ namespace Cashier_Station
                     RouteGridView.DataSource = ds.Tables[0];
                 }
 
-                RouteGridView.Columns[0].HeaderText = "Номер маршруту";
-                RouteGridView.Columns[1].HeaderText = "Точка відправлення";
-                RouteGridView.Columns[2].HeaderText = "Точка прибуття";
-                RouteGridView.Columns[3].HeaderText = "Дата відправлення";
-                RouteGridView.Columns[4].HeaderText = "Дата прибуття";
-                RouteGridView.Columns[5].HeaderText = "Кількість місць";
-                RouteGridView.Columns[6].HeaderText = "Номер транспорту";
+                RouteGridView.Columns[0].HeaderText = "Route number";
+                RouteGridView.Columns[1].HeaderText = "Point of departure";
+                RouteGridView.Columns[2].HeaderText = "Point of arrival";
+                RouteGridView.Columns[3].HeaderText = "Date of departure";
+                RouteGridView.Columns[4].HeaderText = "Date of arrival";
+                RouteGridView.Columns[5].HeaderText = "Number of seats";
+                RouteGridView.Columns[6].HeaderText = "Transport number";
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("При завантаженні даних виникла помилка");
+                
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

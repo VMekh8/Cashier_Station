@@ -45,7 +45,7 @@ namespace Cashier_Station
             }
             catch (Exception ex)
             {
-                MessageBox.Show("При завантаженні даних з бази даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while loading data from the database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine(ex.Message);
             }
             finally
@@ -66,7 +66,7 @@ namespace Cashier_Station
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Ви впевнені, що хочете повернути цей квиток?", "Повернення", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var result = MessageBox.Show("Are you sure you want to return this ticket?", "Returns", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {  
                 try
@@ -87,14 +87,14 @@ namespace Cashier_Station
                         cmd.ExecuteNonQuery();
                     }
 
-                    Console.WriteLine("Дані успішно відправлені");
-                    MessageBox.Show("Ваш квиток повернено!\nГроші невдовзі повернуться на ваш рахунок", "Повернення квитків", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Console.WriteLine("Data has been successfully sent");
+                    MessageBox.Show("Your ticket is refunded!\nThe money will be returned to your account shortly", "Return of tickets", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("При завантаженні даних виникла помилка");
+                    Console.WriteLine("An error occurred while uploading data");
                     Console.WriteLine(ex.Message);
-                    MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {

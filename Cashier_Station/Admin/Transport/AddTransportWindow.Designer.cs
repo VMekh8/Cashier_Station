@@ -44,9 +44,10 @@
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ExitButton.ForeColor = System.Drawing.Color.White;
-            this.ExitButton.Location = new System.Drawing.Point(953, 2);
+            this.ExitButton.Location = new System.Drawing.Point(1271, 2);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(31, 25);
+            this.ExitButton.Size = new System.Drawing.Size(41, 31);
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "X";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -60,9 +61,10 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.NameTransportTextBox);
             this.panel1.Controls.Add(this.IdTrasportTextBox);
-            this.panel1.Location = new System.Drawing.Point(207, 50);
+            this.panel1.Location = new System.Drawing.Point(276, 62);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(570, 380);
+            this.panel1.Size = new System.Drawing.Size(760, 468);
             this.panel1.TabIndex = 4;
             // 
             // SubmitButton
@@ -71,11 +73,12 @@
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SubmitButton.ForeColor = System.Drawing.Color.White;
-            this.SubmitButton.Location = new System.Drawing.Point(188, 315);
+            this.SubmitButton.Location = new System.Drawing.Point(251, 388);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(211, 45);
+            this.SubmitButton.Size = new System.Drawing.Size(281, 55);
             this.SubmitButton.TabIndex = 3;
-            this.SubmitButton.Text = "Відправити";
+            this.SubmitButton.Text = "Send";
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
@@ -84,22 +87,24 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(30, 159);
+            this.label3.Location = new System.Drawing.Point(40, 196);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(247, 31);
+            this.label3.Size = new System.Drawing.Size(305, 40);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Назва транспорту ";
+            this.label3.Text = "Name of transport ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(30, 63);
+            this.label2.Location = new System.Drawing.Point(40, 78);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(251, 31);
+            this.label2.Size = new System.Drawing.Size(291, 40);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Номер транспорту";
+            this.label2.Text = "Transport number";
             // 
             // NameTransportTextBox
             // 
@@ -112,10 +117,10 @@
             this.NameTransportTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameTransportTextBox.ForeColor = System.Drawing.Color.White;
             this.NameTransportTextBox.isPassword = false;
-            this.NameTransportTextBox.Location = new System.Drawing.Point(36, 195);
-            this.NameTransportTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.NameTransportTextBox.Location = new System.Drawing.Point(48, 240);
+            this.NameTransportTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.NameTransportTextBox.Name = "NameTransportTextBox";
-            this.NameTransportTextBox.Size = new System.Drawing.Size(500, 46);
+            this.NameTransportTextBox.Size = new System.Drawing.Size(667, 57);
             this.NameTransportTextBox.TabIndex = 1;
             this.NameTransportTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -130,22 +135,23 @@
             this.IdTrasportTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.IdTrasportTextBox.ForeColor = System.Drawing.Color.White;
             this.IdTrasportTextBox.isPassword = false;
-            this.IdTrasportTextBox.Location = new System.Drawing.Point(36, 99);
-            this.IdTrasportTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.IdTrasportTextBox.Location = new System.Drawing.Point(48, 122);
+            this.IdTrasportTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.IdTrasportTextBox.Name = "IdTrasportTextBox";
-            this.IdTrasportTextBox.Size = new System.Drawing.Size(500, 46);
+            this.IdTrasportTextBox.Size = new System.Drawing.Size(667, 57);
             this.IdTrasportTextBox.TabIndex = 0;
             this.IdTrasportTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // AddTransportWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(984, 480);
+            this.ClientSize = new System.Drawing.Size(1312, 591);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ExitButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddTransportWindow";
             this.Text = "AddTransportWindow";
             this.panel1.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Bunifu.Framework.UI;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,7 +43,7 @@ namespace Cashier_Station
             }
             catch (Exception ex)
             {
-                MessageBox.Show("При завантаженні даних з бази даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while loading data from the database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine(ex.Message);
             }
             finally
@@ -69,20 +70,20 @@ namespace Cashier_Station
                     RouteGridView.DataSource = ds.Tables[0];
                 }
 
-                RouteGridView.Columns[0].HeaderText = "Номер маршруту";
-                RouteGridView.Columns[1].HeaderText = "Точка відправлення";
-                RouteGridView.Columns[2].HeaderText = "Точка прибуття";
-                RouteGridView.Columns[3].HeaderText = "Дата відправлення";
-                RouteGridView.Columns[4].HeaderText = "Дата прибуття";
-                RouteGridView.Columns[5].HeaderText = "Кількість місць";
-                RouteGridView.Columns[6].HeaderText = "Номер транспорту";
+                RouteGridView.Columns[0].HeaderText = "Route number";
+                RouteGridView.Columns[1].HeaderText = "Point of departure";
+                RouteGridView.Columns[2].HeaderText = "Point of arrival";
+                RouteGridView.Columns[3].HeaderText = "Date of departure";
+                RouteGridView.Columns[4].HeaderText = "Date of arrival";
+                RouteGridView.Columns[5].HeaderText = "Number of seats";
+                RouteGridView.Columns[6].HeaderText = "Transport number";
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("При завантаженні даних виникла помилка");
+                Console.WriteLine("An error occurred while uploading data");
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -121,9 +122,9 @@ namespace Cashier_Station
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Виникла помилка при вибірці даних");
+                Console.WriteLine("An error occurred when selecting data");
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("При завантаженні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while uploading data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -133,37 +134,46 @@ namespace Cashier_Station
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Ви впевнені, що хочете відправити цю інформацію?", "Редагування", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var result = MessageBox.Show("Are you sure you want to send this information?", "Edit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 try
                 {
                     db.OpenConnection();
                     string query = "UPDATE route SET StartPoint = @StartPoint, EndPoint = @EndPoint, DateofStart = @DateofStart, DateofEnd = @DateofEnd, SeatsNumber = @SeatsNumber WHERE id = @id";
+                    DateTime dateOfStart = DateTime.Parse(DateStart.Value.ToString());
+                    DateTime dateOfEnd = DateTime.Parse(DateArrival.Value.ToString());
 
-                    using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                    if (dateOfStart.Date <= DateTime.Now.Date || dateOfEnd.Date <= DateTime.Now.Date || dateOfStart.Date >= dateOfEnd.Date)
                     {
-                        cmd.Parameters.AddWithValue("@StartPoint", StartPoint.Text);
-                        cmd.Parameters.AddWithValue("@EndPoint", EndPoint.Text);
-                        cmd.Parameters.AddWithValue("@DateofStart", DateTime.Parse(DateStart.Value.ToString()));
-                        cmd.Parameters.AddWithValue("@DateofEnd", DateTime.Parse(DateArrival.Value.ToString()));
-                        cmd.Parameters.AddWithValue("@SeatsNumber", int.Parse(SeatsNumber.Text));
-
-
-                        cmd.Parameters.AddWithValue("@id", int.Parse(IdRouteDropDown.selectedValue));
-
-                        cmd.ExecuteNonQuery();
-                        
+                        MessageBox.Show("Invalid date selection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    else
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                        {
+                            cmd.Parameters.AddWithValue("@StartPoint", StartPoint.Text);
+                            cmd.Parameters.AddWithValue("@EndPoint", EndPoint.Text);
+                            cmd.Parameters.AddWithValue("@DateofStart", DateTime.Parse(DateStart.Value.ToString()));
+                            cmd.Parameters.AddWithValue("@DateofEnd", DateTime.Parse(DateArrival.Value.ToString()));
+                            cmd.Parameters.AddWithValue("@SeatsNumber", int.Parse(SeatsNumber.Text));
 
-                    Console.WriteLine("Дані успішно відправлені");
-                    MessageBox.Show("Дані успішно відправленні", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            cmd.Parameters.AddWithValue("@id", int.Parse(IdRouteDropDown.selectedValue));
+
+                            cmd.ExecuteNonQuery();
+
+                        }
+
+                        Console.WriteLine("Data has been successfully sent");
+                        MessageBox.Show("Data has been successfully sent", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("При редагуванні даних виникла помилка");
+                    Console.WriteLine("An error occurred while editing data");
                     Console.WriteLine(ex.Message.ToString());
-                    MessageBox.Show("При редагуванні даних виникла помилка", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("An error occurred while editing data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 { 
